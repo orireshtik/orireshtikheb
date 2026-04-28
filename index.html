@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.4.0"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <!-- Google Fonts -->
@@ -21,64 +20,75 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-        .achievement-card, .chart-card, .press-card, .recognition-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .achievement-card, .chart-card, .press-card, .recognition-card, .video-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .achievement-card:hover, .chart-card:hover, .press-card:hover, .recognition-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        .achievement-card:hover, .chart-card:hover, .press-card:hover, .recognition-card:hover, .video-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 30px -5px rgb(0 0 0 / 0.15);
         }
         .chart-container {
             height: 50vh;
             max-height: 450px;
         }
+        /* Fade in animation for the whole container */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-slate-50/30 text-slate-900">
 
-    <div class="container mx-auto px-4 py-12 sm:py-20">
+    <div class="container mx-auto px-4 py-12 sm:py-20 fade-in">
 
         <!-- Hero / Overview Section -->
         <section id="overview" class="mb-20">
-            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-slate-100">
                 <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                     <!-- Profile Picture -->
                     <div class="flex-shrink-0">
-                        <img src="https://eshkolot.co.il/wp-content/uploads/2025/09/%D7%90%D7%95%D7%A8%D7%99-%D7%A8%D7%A9%D7%98%D7%99%D7%A7-%D7%A7%D7%A8%D7%93%D7%99%D7%98-%D7%90%D7%9E%D7%A0%D7%93%D7%94-%D7%A1%D7%95%D7%A8%D7%95%D7%93%D7%99-1.jpg" alt="אורי רשטיק" class="w-40 h-40 rounded-full object-cover ring-4 ring-offset-4 ring-violet-500">
+                        <img src="https://eshkolot.co.il/wp-content/uploads/2025/09/%D7%90%D7%95%D7%A8%D7%99-%D7%A8%D7%A9%D7%98%D7%99%D7%A7-%D7%A7%D7%A8%D7%93%D7%99%D7%98-%D7%90%D7%9E%D7%A0%D7%93%D7%94-%D7%A1%D7%95%D7%A8%D7%95%D7%93%D7%99-1.jpg" alt="אורי רשטיק" class="w-40 h-40 rounded-full object-cover ring-4 ring-offset-4 ring-violet-500 shadow-lg">
                     </div>
                     <!-- Bio and Contact -->
-                    <div>
+                    <div class="text-right">
                         <h1 class="text-4xl sm:text-5xl font-bold text-slate-800">אורי רשטיק</h1>
-                        <p class="mt-4 text-lg text-slate-600">
+                        <p class="mt-4 text-lg text-slate-600 leading-relaxed">
                             מנהל בכיר עם התמקדות בצמיחה, בעל ניסיון של למעלה מ-15 שנים בהובלת ארגונים דרך התרחבות אסטרטגית, ארגון מחדש פיננסי ופיתוח עסקי. מתמחה בניהול מו"מ מורכב, ובעל רקורד מוכח בהגדלת הכנסות, גיוס כספים וניהול תקציבים ותפעול מורכבים בקנה מידה גדול.
                         </p>
-                        <p class="mt-3 text-slate-600">
+                        <p class="mt-3 text-slate-600 leading-relaxed">
                             כמנכ"ל במספר ארגונים ארציים, בניתי תוכניות פיננסיות ארוכות טווח, ייעלתי הקצאת משאבים והובלתי צוותים רב-תפקודיים להשגת צמיחה מדידה ובת-קיימא.
                         </p>
                          <!-- Contact Links -->
                         <div class="flex items-center flex-wrap gap-4 mt-6">
-                            <a href="https://wa.me/972528044478" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-green-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-green-600 transition-colors">
+                            <a href="https://wa.me/972528044478" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-green-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-green-600 transition-all hover:scale-105 shadow-md">
                                 <i data-lucide="message-circle" class="w-5 h-5 ml-1"></i> וואטסאפ
                             </a>
-                            <a href="mailto:orireshtik@gmail.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-red-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-red-600 transition-colors">
+                            <a href="mailto:orireshtik@gmail.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-red-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-red-600 transition-all hover:scale-105 shadow-md">
                                 <i data-lucide="mail" class="w-5 h-5 ml-1"></i> אימייל
                             </a>
-                            <a href="https://www.linkedin.com/in/ori-reshtik/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-blue-600 text-white font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
+                            <a href="https://www.linkedin.com/in/ori-reshtik/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-blue-600 text-white font-semibold px-4 py-2 rounded-full hover:bg-blue-700 transition-all hover:scale-105 shadow-md">
                                 <i data-lucide="linkedin" class="w-5 h-5 ml-1"></i> לינקדאין
                             </a>
-                            <a href="tel:+972528044478" class="flex items-center gap-2 bg-slate-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-slate-800 transition-colors">
+                            <a href="tel:+972528044478" class="flex items-center gap-2 bg-slate-700 text-white font-semibold px-4 py-2 rounded-full hover:bg-slate-800 transition-all hover:scale-105 shadow-md">
                                 <i data-lucide="phone" class="w-5 h-5 ml-1"></i> טלפון
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Recognition Section -->
-                <a href="https://www.globes.co.il/news/sparticle.aspx?did=1001355042" target="_blank" rel="noopener noreferrer" class="recognition-card block mt-12 border-t pt-8">
-                    <div class="bg-slate-50 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6">
+                <a href="https://www.globes.co.il/news/sparticle.aspx?did=1001355042" target="_blank" rel="noopener noreferrer" class="recognition-card block mt-12 border-t pt-8 group">
+                    <div class="bg-slate-50 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6 group-hover:bg-slate-100 transition-colors border border-transparent group-hover:border-slate-200 relative">
                          <img src="https://res.cloudinary.com/globes/image/upload/f_auto/v1609311634/Digital/40%20%D7%A2%D7%9C%2040/logo-red_elh3zm.svg" alt="40 under 40" class="h-16">
                         <div>
                             <p class="font-bold text-slate-800 text-lg">נבחר ברשימת "40 מתחת ל-40" של גלובס</p>
                             <p class="text-slate-600">נבחר לאחד המנהיגים הצעירים המבטיחים בישראל לשנת 2020.</p>
+                            <span class="text-blue-600 text-sm font-semibold flex items-center gap-1 mt-2">
+                                לקריאת הכתבה המלאה בגלובס <i data-lucide="external-link" class="w-3 h-3"></i>
+                            </span>
                         </div>
                         <img src="https://www.ophirlaw.com/wp-content/uploads/2022/11/Globes-Logo.png" alt="לוגו גלובס" class="h-8 sm:mr-auto">
                     </div>
@@ -91,95 +101,108 @@
              <div class="text-center mb-16">
                 <img src="https://eshkolot.co.il/wp-content/uploads/2017/10/header_logo.png" alt="לוגו אשכולות" class="mx-auto h-20 mb-6">
                 <h2 class="text-4xl sm:text-5xl font-bold text-slate-800 tracking-tight">מקרה בוחן: אשכולות</h2>
-                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">הדגמת צמיחה פיננסית ויציבות עקבית.</p>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto italic underline decoration-sky-500/30">אופטימיזציה של תזרימי הכנסה, ניהול רגולטורי אסטרטגי והרחבת השפעה גלובלית.</p>
             </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-50 overflow-hidden">
                     <div class="chart-container relative">
                         <canvas id="eshkolotRevenueChart"></canvas>
                     </div>
                 </div>
-                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-50 overflow-hidden">
                     <div class="chart-container relative">
                         <canvas id="eshkolotNetProfitChart"></canvas>
                     </div>
                 </div>
             </div>
+
             <div class="text-center mt-24 mb-16">
-                <h3 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">יוזמות והישגים מרכזיים</h3>
+                <h3 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">הישגים עסקיים ואסטרטגיים</h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="bar-chart-3" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">צמיחה של 33%+ בהכנסות</h4>
-                    <p class="text-slate-600">השגת צמיחה של למעלה מ-33% בהכנסות החברה באמצעות פיתוח עסקי אסטרטגי, משא ומתן וסגירת עסקאות ארוכות טווח.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">Revenue Stream Strategy</h4>
+                    <p class="text-slate-600">יצירת בסיס הכנסות מגוון, יציב וארוך טווח באמצעות הסכמי התקשרות רב-שנתיים מול כלל תאגידי המדיה והשידור המרכזיים.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="percent" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">צמיחה של 40% בחלוקת תמלוגים</h4>
-                    <p class="text-slate-600">הגדלת חלוקת התמלוגים לבעלי עניין בכמעט 40%, לצד הקמת קרן סיוע לאמנים במצוקה.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="trending-up" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">Scalability וצמיחה מואצת</h4>
+                    <p class="text-slate-600">הובלת מהלך צמיחה של 50% בשורת ההכנסות (Revenue Growth) דרך אסטרטגיית פיתוח עסקי ממוקדת וסגירת עסקאות עוגן.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="scale" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">תקדים משפטי היסטורי</h4>
-                    <p class="text-slate-600">הובלת תיק מוצלח בבית המשפט העליון, שהבטיח זכויות תמלוגים לאמנים ממכשירים דיגיטליים ("היטל העתקה פרטית").</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="landmark" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">ניהול רגולציה וקשרי ממשל</h4>
+                    <p class="text-slate-600">הובלת מהלכי לובינג וחקיקה אסטרטגיים מול הדרג הממשלתי, להגדלת פוטנציאל הגבייה ויצירת מקורות הכנסה חדשים.</p>
                 </div>
-                 <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="landmark" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">יוזמות חקיקה</h4>
-                    <p class="text-slate-600">הובלת יוזמות חקיקה ורגולציה להגדלה משמעותית של גביית התמלוגים והכנסות החברה.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="users-2" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">Stakeholders Value & Retention</h4>
+                    <p class="text-slate-600">הגדלת חלוקת התגמולים לבעלי עניין בכ-40%, תוך שיפור מערך השירות והנזילות הכספית לאמני ישראל.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="satellite-dish" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">הסכמי שידור ארוכי טווח</h4>
-                    <p class="text-slate-600">ביסוס הסכמים ברי-קיימא וארוכי טווח עם כל גופי השידור ותאגידי המדיה הגדולים בישראל.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="gavel" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">הגנה על IP ונכסים דיגיטליים</h4>
+                    <p class="text-slate-600">יצירת תקדים משפטי היסטורי בבית המשפט העליון המגן על קניין רוחני (IP) והבטחת זכויות במכשירים דיגיטליים.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="globe-2" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">חדירה לשוק הבינלאומי</h4>
-                    <p class="text-slate-600">הצטרפות לארגון הגג הבינלאומי (SCAPR) וחתימה על הסכמים לגביית תמלוגים מחו"ל.</p>
-                </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="library" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">מודל ממשל תאגידי</h4>
-                    <p class="text-slate-600">בניית מודל ממשל תאגידי חדשני, שהוכר על ידי בית המשפט, וביסס את החברה כנאמן מוסמך לזכויות אמנים.</p>
-                </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="users-round" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">הקמת אשל"מ</h4>
-                    <p class="text-slate-600">ייסוד וניהול תאגיד גבייה משותף כיחידת רווח והפסד, וכהונה כיו"ר הדירקטוריון.</p>
-                </div>
-                 <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="database" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">מערכות טכנולוגיות ופיננסיות</h4>
-                    <p class="text-slate-600">בנייה והטמעה של מערכות מידע, כספים וחלוקת תמלוגים מקיפות לבעלי העניין.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="globe" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">Global Market Expansion</h4>
+                    <p class="text-slate-600">חדירה לשוק הבינלאומי דרך שותפויות גלובליות (SCAPR) וביסוס הסכמי גבייה הדדיים מחוץ לגבולות המדינה.</p>
                 </div>
             </div>
-             <!-- In the Press Section for Eshkolot -->
+
+            <!-- Press Section -->
             <div class="text-center mt-24 mb-16">
                 <h3 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">פרסומים בתקשורת</h3>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                 <a href="https://www.ynet.co.il/economy/article/bymju0g3t" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-24">
+                 <a href="https://www.ynet.co.il/economy/article/bymju0g3t" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://www.ophirlaw.com/wp-content/uploads/2022/07/YNET-LOGO-2.webp" alt="לוגו Ynet" class="max-h-8 w-auto">
                     <p class="text-xs text-slate-500 mt-3">8 בינואר 2023</p>
                 </a>
-                <a href="https://www.ynet.co.il/economy/article/bjccbvcjs" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://www.ynet.co.il/economy/article/bjccbvcjs" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://www.ophirlaw.com/wp-content/uploads/2022/07/YNET-LOGO-2.webp" alt="לוגו Ynet" class="max-h-8 w-auto">
                     <p class="text-xs text-slate-500 mt-3">11 ביולי 2022</p>
                 </a>
-                <a href="https://www.kan.org.il/content/kan-news/culture/402022/" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://www.kan.org.il/content/kan-news/culture/402022/" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Kan11Logo.svg/250px-Kan11Logo.svg.png" alt="לוגו כאן 11" class="max-h-12 w-auto">
                     <p class="text-xs text-slate-500 mt-3">4 ביולי 2023</p>
                 </a>
-                <a href="https://www.calcalist.co.il/local_news/article/hkhxhsgm2" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://www.calcalist.co.il/local_news/article/hkhxhsgm2" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://pic1.calcalist.co.il/picserver3/wcm_upload_dev/2022/09/15/Hk9OzwlWi/calcalistlogn.png" alt="לוגו כלכליסט" class="max-h-8 w-auto">
                     <p class="text-xs text-slate-500 mt-3">20 במאי 2021</p>
                 </a>
-                <a href="https://timeout.co.il/ppost/%D7%9E%D7%90%D7%96%D7%99%D7%A0%D7%99%D7%9D-%D7%9C%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94-%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%AA-%D7%91%D7%A2%D7%A1%D7%A7-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%9B%D7%93%D7%90%D7%99/" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://timeout.co.il/ppost/%D7%9E%D7%90%D7%96%D7%99%D7%A0%D7%99%D7%9D-%D7%9C%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94-%D7%99%D7%A1%D7%A8%D7%90%D7%9C%D7%99%D7%AA-%D7%91%D7%A2%D7%A1%D7%A7-%D7%A9%D7%9C%D7%9B%D7%9D-%D7%9B%D7%93%D7%90%D7%99/" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                      <img src="https://tekja.com/wp-content/uploads/2019/05/press_logos_v1-07-uai-258x97.jpg" alt="לוגו טיים אאוט" class="max-h-12 w-auto">
                     <p class="text-xs text-slate-500 mt-3">19 בדצמבר 2023</p>
                 </a>
+            </div>
+
+            <!-- Video Section -->
+            <div class="max-w-4xl mx-auto mb-16">
+                <div class="video-card bg-white p-6 rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+                    <h4 class="text-center text-slate-800 font-bold mb-4 text-xl">פודקאסט: אורי רשטיק על חזון ופעילות אשכולות</h4>
+                    <div class="aspect-video rounded-2xl overflow-hidden shadow-inner bg-slate-100">
+                        <iframe 
+                            class="w-full h-full"
+                            src="https://www.youtube.com/embed/PwFIXCexxQQ?rel=0" 
+                            title="פודקאסט אשכולות עם אורי רשטיק" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="mt-6 flex flex-col items-center">
+                        <p class="text-slate-500 text-sm italic text-center mb-4">
+                            אם הסרטון לא נטען, ניתן לצפות בו ישירות באתר YouTube:
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=PwFIXCexxQQ" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-2 rounded-full font-bold hover:bg-red-700 transition-colors shadow-md">
+                            <i data-lucide="play-circle" class="w-5 h-5"></i> צפייה ישירה ב-YouTube
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -191,272 +214,297 @@
             <div class="text-center mb-16">
                  <img src="https://www.guidestar.org.il//servlet/servlet.FileDownload?file=00P2400000ESTGrEAP" alt="לוגו שחם" class="mx-auto h-24 mb-6">
                 <h2 class="text-4xl sm:text-5xl font-bold text-slate-800 tracking-tight">מקרה בוחן: שח"ם</h2>
-                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto">סיכום יוזמות אסטרטגיות והשפעתן על צמיחה ארגונית ופיננסית.</p>
+                <p class="mt-4 text-lg text-slate-600 max-w-3xl mx-auto italic underline decoration-violet-500/30">טרנספורמציה ארגונית, הרחבת נתח שוק וניהול משא ומתן אסטרטגי.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-50 overflow-hidden">
                     <div class="chart-container relative">
                         <canvas id="shahamRevenueChart"></canvas>
                     </div>
                 </div>
-                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg">
+                <div class="chart-card bg-white p-6 md:p-8 rounded-2xl shadow-lg border border-slate-50 overflow-hidden">
                     <div class="chart-container relative">
                         <canvas id="shahamSurplusChart"></canvas>
                     </div>
                 </div>
             </div>
             <div class="text-center mt-24 mb-16">
-                <h3 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">יוזמות והישגים מרכזיים</h3>
+                <h3 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">הישגים אסטרטגיים</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="users-2" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">צמיחה ארגונית</h4>
-                    <p class="text-slate-600">הרחבת החברות מ-1,800 ל-2,500 חברים, וביסוס שח"ם כארגון היציג הגדול ביותר במגזר התרבות.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="users-2" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">צמיחה מואצת בבסיס הלקוחות</h4>
+                    <p class="text-slate-600">הרחבת בסיס החברים בכ-40% (מ-1,800 ל-2,500), ומיצוב הארגון כ-Market Leader וגוף הייצוג הגדול והמשפיע ביותר במגזר.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="expand" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">הרחבת הייצוג</h4>
-                    <p class="text-slate-600">הרחבת הייצוג מקולנוע וטלוויזיה לתחומים נוספים, כולל תיאטרון רפרטוארי, תיאטרון ילדים, פרינג', דיבוב ועוד.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="expand" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">גיוון פורטפוליו וחדירה לסגמנטים חדשים</h4>
+                    <p class="text-slate-600">הרחבת פעילות הארגון מעבר לקולנוע וטלוויזיה אל תחומי התיאטרון הרפרטוארי, הדיבוב והפרינג', תוך הגדלת דריסת הרגל בשוק.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="handshake" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">הסכמי עבודה היסטוריים</h4>
-                    <p class="text-slate-600">הובלת משא ומתן להסכמים קיבוציים היסטוריים, שהבטיחו שיפור שכר ותנאים סוציאליים לשחקנים בתיאטראות הגדולים, בקולנוע ובטלוויזיה.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="handshake" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">אופטימיזציה של תנאי התקשרות</h4>
+                    <p class="text-slate-600">ניהול מו"מ מורכב וסגירת הסכמים קיבוציים אסטרטגיים, שהובילו לשיפור משמעותי במבנה השכר ותנאי הרווחה של כוח האדם בתעשייה.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">תקדים בביטוח לאומי</h4>
-                    <p class="text-slate-600">השגת תיקון במוסד לביטוח לאומי, המעניק לשחקנים פרילנסרים דמי אבטלה – חבל הצלה קריטי במשבר הקורונה.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">הבטחת חוסן פיננסי ורשת ביטחון תפעולית</h4>
+                    <p class="text-slate-600">הובלת מהלך רגולטורי מול המוסד לביטוח לאומי ליצירת זכאות לדמי אבטלה לפרילנסרים – נכס פיננסי קריטי בזמני משבר.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="briefcase" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">יחידת הכשרה מקצועית</h4>
-                    <p class="text-slate-600">הקמת יחידת רווח והפסד רווחית ועצמאית לקורסים וסדנאות מקצועיות לשחקנים.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="briefcase" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">הקמת יחידת P&L למנועי צמיחה</h4>
+                    <p class="text-slate-600">ייסוד יחידת רווח והפסד עצמאית למערך ההכשרה המקצועית, שהפכה למקור הכנסה משמעותי ורווחי עבור הארגון.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="building-2" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">שותפות קהילתית</h4>
-                    <p class="text-slate-600">יצירת מסגרת לעבודת שחקנים בקהילה ושיתוף פעולה עם מפעל הפיס.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="building-2" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">יצירת שותפויות אסטרטגיות רב-מגזריות</h4>
+                    <p class="text-slate-600">פיתוח מודלים של אחריות תאגידית (CSR) בשיתוף גופים ציבוריים מובילים כמו מפעל הפיס, להרחבת פעילות הארגון בקהילה.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="heart-handshake" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">עזרה הדדית וגיוס כספים</h4>
-                    <p class="text-slate-600">הקמה והובלה משותפת של עמותת "שחקני הנשמה" לסיוע לאמנים במצוקה, כולל גיוס של למעלה ממיליון ש"ח.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="heart-handshake" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">Capital Campaign וניהול קרנות סיוע</h4>
+                    <p class="text-slate-600">הקמה והובלה משותפת של עמותת "שחקני הנשמה" לסיוע לאמנים במצוקה, עם גיוס הון של למעלה ממיליון ש"ח לסיוע הומניטרי.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                     <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="award" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">פרסים והכרה</h4>
-                    <p class="text-slate-600">ייסוד טקס פרסי שח"ם השנתי, אירוע מוכר בתעשייה להוקרת שחקנים, בדומה לפרסי ה-SAG.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                     <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="award" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">מיצוף כ-Market Leader ומיתוג תעשייתי</h4>
+                    <p class="text-slate-600">ייסוד טקס פרסי שח"ם כאירוע הדגל של התעשייה, המייצר חשיפה מותגית מקסימלית ומשפר את הנכסיות (Equity) של הארגון.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="globe-2" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">פעילות בינלאומית</h4>
-                    <p class="text-slate-600">ייצוג שחקני ישראל בפדרציה הבינלאומית של השחקנים (FIA) ואירוח כנס בינלאומי למאבק ב-BDS.</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-violet-100 text-violet-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="globe-2" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">גלובליזציה והרחבת השפעה בזירה הבינלאומית</h4>
+                    <p class="text-slate-600">ייצוג שחקני ישראל בפדרציה העולמית (FIA) וניהול יחסים דיפלומטיים/עסקיים למאבק בחרמות וקידום אינטרסים ישראליים.</p>
                 </div>
             </div>
             <div class="text-center mt-24 mb-16">
                 <h3 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">פרסומים בתקשורת</h3>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <a href="https://www.haaretz.co.il/gallery/media/2017-06-19/ty-article/0000017f-e2be-d7b2-a77f-e3bfee540000" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://www.haaretz.co.il/gallery/media/2017-06-19/ty-article/0000017f-e2be-d7b2-a77f-e3bfee540000" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://upload.wikimedia.org/wikipedia/he/3/37/Haaretz_site_logo.png" alt="לוגו הארץ" class="max-h-8 w-auto">
                     <p class="text-xs text-slate-500 mt-3">19 ביוני 2017</p>
                 </a>
-                <a href="https://www.globes.co.il/news/article.aspx?did=1001337359" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://www.globes.co.il/news/article.aspx?did=1001337359" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://www.ophirlaw.com/wp-content/uploads/2022/11/Globes-Logo.png" alt="לוגו גלובס" class="max-h-8 w-auto">
                     <p class="text-xs text-slate-500 mt-3">16 ביולי 2020</p>
                 </a>
-                <a href="https://beersheva.mynet.co.il/local_news/article/m_387190" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://beersheva.mynet.co.il/local_news/article/m_387190" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                      <img src="https://www.ophirlaw.com/wp-content/uploads/2022/07/YNET-LOGO-2.webp" alt="לוגו Mynet" class="max-h-8 w-auto">
                     <p class="text-xs text-slate-500 mt-3">27 בפברואר 2017</p>
                 </a>
-                <a href="https://www.calcalist.co.il/consumer/articles/0,7340,L-3682671,00.html" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://www.calcalist.co.il/consumer/articles/0,7340,L-3682671,00.html" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://pic1.calcalist.co.il/picserver3/wcm_upload_dev/2022/09/15/Hk9OzwlWi/calcalistlogn.png" alt="לוגו כלכליסט" class="max-h-8 w-auto">
                     <p class="text-xs text-slate-500 mt-3">22 בינואר 2016</p>
                 </a>
-                <a href="https://b.walla.co.il/item/3074506" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                <a href="https://b.walla.co.il/item/3074506" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://www.jds-law.co.il/wp-content/uploads/2018/02/3-300x168.png" alt="לוגו וואלה!" class="max-h-12 w-auto">
                     <p class="text-xs text-slate-500 mt-3">20 ביוני 2017</p>
                 </a>
-                 <a href="https://www.makorrishon.co.il/nrg/online/47/ART2/756/488.html" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32">
+                 <a href="https://www.makorrishon.co.il/nrg/online/47/ART2/756/488.html" target="_blank" rel="noopener noreferrer" class="press-card bg-white p-6 rounded-2xl shadow-lg flex flex-col items-center justify-center h-32 border border-slate-50">
                     <img src="https://jiss.org.il/wp-content/uploads/2023/10/d79ed7a7d795d7a8-300x300.jpg.webp" alt="לוגו מקור ראשון" class="max-h-12 w-auto">
                     <p class="text-xs text-slate-500 mt-3">3 במרץ 2015</p>
                 </a>
             </div>
         </section>
 
-        <!-- Additional Roles Section -->
+        <!-- Additional Roles Section (Business-Style Redesign) -->
         <section id="additional-roles" class="mb-24">
             <div class="text-center mt-24 mb-16">
-                <h2 class="text-4xl sm:text-5xl font-bold text-slate-800 tracking-tight">תפקידי מפתח נוספים</h2>
+                <h2 class="text-4xl sm:text-5xl font-bold text-slate-800 tracking-tight">תפקידי מפתח וניסיון דירקטוריוני</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="droplet" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">יו"ר, מי גבעתיים</h4>
-                    <p class="text-slate-600">הובלת תאגיד המים העירוני, שהוכר כתאגיד מצטיין על ידי רשות המים. (2016-2023)</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="droplet" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">יו"ר דירקטוריון, מי גבעתיים</h4>
+                    <p class="text-slate-600">הובלת אסטרטגיה תפעולית ופיננסית של תאגיד המים העירוני. מיצוב החברה כתאגיד מצטיין מטעם רשות המים (2016-2023).</p>
                 </div>
                 <a href="https://upload.wikimedia.org/wikipedia/he/3/3e/%D7%93%D7%99%D7%9F_%D7%95%D7%97%D7%A9%D7%91%D7%95%D7%9F_-_%D7%90%D7%95%D7%A8%D7%99_%D7%A8%D7%A9%D7%98%D7%99%D7%A7.pdf" target="_blank" rel="noopener noreferrer" class="block">
-                    <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg h-full">
-                        <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="graduation-cap" class="w-8 h-8"></i></div>
-                        <h4 class="text-xl font-bold text-slate-800 mb-2">יו"ר, התאחדות הסטודנטים והסטודנטיות בישראל</h4>
-                        <p class="text-slate-600">הובלת מהלך הבראה פיננסי מגירעון, בניית שותפויות אסטרטגיות וניהול צוות של 20 עובדים. (2012-2014)</p>
+                    <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg h-full border border-slate-50">
+                        <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="graduation-cap" class="w-8 h-8"></i></div>
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">יו"ר, התאחדות הסטודנטים הארצית</h4>
+                        <p class="text-slate-600">הובלת Turnaround פיננסי מורכב מגרעון לאיזון תקציבי. פיתוח Strategic Partnerships וניהול הון אנושי וארגוני (2012-2014).</p>
                     </div>
                 </a>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="building" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">דירקטור, איסתא ליינס</h4>
-                    <p class="text-slate-600">חבר דירקטוריון בחברה ציבורית ובחברות הבת שלה, כולל איסתא ישראל, איסתא נכסים ואמריקן אקספרס טרוול. (2013-2015)</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="building" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">דירקטור, איסתא ליינס (חברה ציבורית)</h4>
+                    <p class="text-slate-600">חברות בדירקטוריונים של קבוצת איסתא ובחברות הבת (נכסים, American Express Travel). מעורבות בקבלת החלטות בדרג ה-Board.</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="university" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">חבר, המועצה להשכלה גבוהה</h4>
-                    <p class="text-slate-600">חבר המל"ג וועדות המשנה שלה למדיניות, פיקוח ואכיפה. (2013-2015)</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="university" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">חבר המועצה להשכלה גבוהה (מל"ג)</h4>
+                    <p class="text-slate-600">כהונה במוסד הסטטוטורי המנהל את מדיניות ההשכלה הגבוהה בישראל. חברות בוועדות מדיניות תקציבית, פיקוח ואכיפה (2013-2015).</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="landmark" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">חבר מועצת העיר גבעתיים</h4>
-                    <p class="text-slate-600">חבר פעיל במועצת העיר, הנהלת העיר והוועדה לתכנון ובנייה. (2008-2018)</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="landmark" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">נבחר ציבור, עיריית גבעתיים</h4>
+                    <p class="text-slate-600">חבר הנהלת העיר והוועדה המקומית לתכנון ובנייה. הובלת מהלכים תשתיתיים ופיתוח עירוני אסטרטגי (2008-2018).</p>
                 </div>
-                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg">
-                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6"><i data-lucide="school" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold text-slate-800 mb-2">יו"ר, אגודת הסטודנטים של אוניברסיטת ת"א</h4>
-                    <p class="text-slate-600">ניהול צוות של כ-80 עובדים עם מחזור של למעלה מ-48 מיליון ש"ח. (2010-2012)</p>
+                <div class="achievement-card bg-white p-8 rounded-2xl shadow-lg border border-slate-50">
+                    <div class="w-16 h-16 bg-gray-100 text-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-inner"><i data-lucide="school" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold text-slate-800 mb-2">יו"ר, אגודת הסטודנטים (אונ' ת"א)</h4>
+                    <p class="text-slate-600">ניהול ארגון מורכב עם מחזור שנתי של כ-48 מיליון ש"ח. הובלת מצבת כוח אדם של כ-80 עובדים ואופטימיזציה של שירותים (2010-2012).</p>
                 </div>
             </div>
         </section>
 
         <!-- Final Recognition Section -->
         <section id="lions-award">
-             <a href="https://www.youtube.com/watch?v=xtX4ZwaOJfE&t=7s" target="_blank" rel="noopener noreferrer" class="recognition-card block">
-                <div class="bg-white rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6 shadow-lg">
+             <a href="https://www.youtube.com/watch?v=xtX4ZwaOJfE&t=7s" target="_blank" rel="noopener noreferrer" class="recognition-card block group">
+                <div class="bg-white rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-6 shadow-lg border border-slate-50 group-hover:bg-slate-50 transition-colors">
                      <img src="https://upload.wikimedia.org/wikipedia/he/2/2d/Lionlogo_2c-1-.jpg" alt="לוגו ליונס גור אריה" class="h-20">
                     <div class="text-center sm:text-right">
-                        <p class="font-bold text-slate-800 text-xl">איש השנה של ליונס גור אריה</p>
+                        <p class="font-bold text-slate-800 text-xl flex items-center justify-center sm:justify-start gap-2">
+                            איש השנה של ליונס גור אריה <i data-lucide="play-circle" class="w-5 h-5 text-red-600 group-hover:scale-110 transition-transform"></i>
+                        </p>
                         <p class="text-slate-600 text-lg">2011-2012</p>
+                        <span class="text-blue-600 text-sm font-semibold mt-1 block">לצפייה בטקס ההוקרה ביוטיוב <i data-lucide="external-link" class="w-3 h-3 inline"></i></span>
                     </div>
                 </div>
             </a>
         </section>
 
-        <!-- Footer -->
-        <footer class="w-full text-center py-10 mt-24 border-t border-slate-200">
-             <h3 class="text-2xl font-bold text-slate-700 mb-6">יצירת קשר</h3>
-             <div class="flex items-center justify-center gap-x-6 md:gap-x-8 mb-6">
-                <a href="https://wa.me/972528044478" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-green-500 transition-colors"><span class="sr-only">WhatsApp</span><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.502 1.906 6.403l-1.485 5.444 5.572-1.467z"/></svg></a>
-                <a href="mailto:orireshtik@gmail.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-red-500 transition-colors"><span class="sr-only">Email</span><i data-lucide="mail" class="w-7 h-7"></i></a>
-                <a href="https://www.linkedin.com/in/ori-reshtik/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-600 transition-colors"><span class="sr-only">LinkedIn</span><i data-lucide="linkedin" class="w-7 h-7"></i></a>
-                <a href="tel:+972528044478" class="text-slate-500 hover:text-slate-900 transition-colors"><span class="sr-only">Phone</span><i data-lucide="phone" class="w-7 h-7"></i></a>
+        <!-- Footer / Contact Section -->
+        <footer class="w-full text-center py-16 mt-24 border-t border-slate-200 bg-white rounded-t-[4rem]">
+             <h3 class="text-3xl font-bold text-slate-800 mb-12 tracking-tight">יצירת קשר</h3>
+             <div class="flex items-center justify-center gap-x-12 mb-10 max-w-sm mx-auto">
+                <a href="tel:+972528044478" class="text-slate-400 hover:text-slate-900 transition-all hover:scale-125 focus:outline-none" title="התקשר">
+                    <i data-lucide="phone" class="w-8 h-8"></i>
+                    <span class="sr-only">Phone</span>
+                </a>
+                <a href="mailto:orireshtik@gmail.com" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-red-500 transition-all hover:scale-125 focus:outline-none" title="שלח אימייל">
+                    <i data-lucide="mail" class="w-8 h-8"></i>
+                    <span class="sr-only">Email</span>
+                </a>
+                <a href="https://wa.me/972528044478" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-green-500 transition-all hover:scale-125 focus:outline-none" title="וואטסאפ">
+                    <i data-lucide="message-circle" class="w-8 h-8"></i>
+                    <span class="sr-only">WhatsApp</span>
+                </a>
+                <a href="https://www.linkedin.com/in/ori-reshtik/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-blue-600 transition-all hover:scale-125 focus:outline-none" title="לינקדאין">
+                    <i data-lucide="linkedin" class="w-8 h-8"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
             </div>
-            <p class="text-slate-500 mt-4">הפורטפוליו של אורי רשטיק</p>
+            <p class="text-slate-400 text-sm font-medium tracking-wide">הפורטפוליו של אורי רשטיק &copy; 2026</p>
         </footer>
 
     </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- Chart 1: Eshkolot Revenue ---
+            const entryAnimation = {
+                duration: 2500,
+                easing: 'easeOutElastic',
+                delay: (context) => context.dataIndex * 150
+            };
+
+            const getGradient = (ctx, colorStart, colorEnd) => {
+                const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+                gradient.addColorStop(0, colorStart);
+                gradient.addColorStop(1, colorEnd);
+                return gradient;
+            };
+
+            const sharedOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: entryAnimation,
+                interaction: { mode: 'nearest', axis: 'x', intersect: false },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                        titleFont: { size: 16, family: 'Assistant', weight: 'bold' },
+                        bodyFont: { size: 14, family: 'Assistant' },
+                        padding: 16,
+                        cornerRadius: 12,
+                        displayColors: false,
+                        caretSize: 8
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { family: 'Assistant' }, color: '#64748b' } },
+                    y: { grid: { color: 'rgba(226, 232, 240, 0.5)', drawBorder: false }, ticks: { font: { family: 'Assistant' }, color: '#64748b' } }
+                }
+            };
+
+            // --- Charts Initialization ---
             const eshkolotRevCtx = document.getElementById('eshkolotRevenueChart').getContext('2d');
-            const eshkolotRevGradient = eshkolotRevCtx.createLinearGradient(0, 0, 0, 400);
-            eshkolotRevGradient.addColorStop(0, 'rgba(56, 189, 248, 0.5)');
-            eshkolotRevGradient.addColorStop(1, 'rgba(56, 189, 248, 0)');
-            
             new Chart(eshkolotRevCtx, {
                 type: 'line',
                 data: {
-                    labels: ['2020', '2021', '2022', '2023', '2024', '2025 (Est)'],
-                    datasets: [{ data: [31.6, 36.4, 35.3, 37.2, 40.1, 42], fill: true, backgroundColor: eshkolotRevGradient, borderColor: '#0284c7', pointBackgroundColor: '#ffffff', pointBorderColor: '#0284c7', tension: 0.4 }]
+                    labels: ['2020', '2021', '2022', '2023', '2024', '2025 (תחזית)'],
+                    datasets: [{
+                        data: [31.6, 36.4, 35.3, 37.2, 40.1, 45],
+                        fill: true,
+                        backgroundColor: getGradient(eshkolotRevCtx, 'rgba(56, 189, 248, 0.4)', 'rgba(56, 189, 248, 0)'),
+                        borderColor: '#0284c7',
+                        borderWidth: 4,
+                        pointRadius: 6,
+                        tension: 0.45
+                    }]
                 },
-                options: {
-                    responsive: true, maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        title: { display: true, text: "מגמת צמיחה בהכנסות", font: { size: 20, weight: '700', family: 'Assistant' }, color: '#1e293b', padding: { bottom: 10 } },
-                        subtitle: { display: true, text: 'כניסה לתפקיד: מרץ 2021', font: { size: 14, family: 'Assistant' }, color: '#64748b', padding: { bottom: 20 } },
-                        tooltip: { enabled: true, backgroundColor: '#1e293b', padding: 12, cornerRadius: 8, displayColors: false, bodyFont: { family: 'Assistant' }, titleFont: { family: 'Assistant' }, callbacks: { label: (c) => `הכנסות: ${c.parsed.y.toLocaleString()}M ILS` } },
-                    },
-                    scales: { y: { min: 30, title: { display: true, text: 'הכנסות (במיליוני ש"ח)', font: { family: 'Assistant' } }, ticks: { callback: (v) => v + 'M' } }, x: { grid: { display: false } } }
-                }
+                options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { display: true, text: 'מגמת צמיחה בהכנסות אשכולות (מיליוני ש"ח)', font: { size: 20, family: 'Assistant', weight: 'bold' } } }, scales: { ...sharedOptions.scales, y: { ...sharedOptions.scales.y, min: 30, ticks: { ...sharedOptions.scales.y.ticks, callback: (v) => v + 'M' } } } }
             });
             
-            // --- Chart 2: Eshkolot Net Profit ---
             const eshkolotProfitCtx = document.getElementById('eshkolotNetProfitChart').getContext('2d');
-            const eshkolotProfitGradient = eshkolotProfitCtx.createLinearGradient(0, 0, 0, 400);
-            eshkolotProfitGradient.addColorStop(0, 'rgba(16, 185, 129, 0.5)');
-            eshkolotProfitGradient.addColorStop(1, 'rgba(16, 185, 129, 0)');
-            
             new Chart(eshkolotProfitCtx, {
                 type: 'line',
                 data: {
-                    labels: ['2020', '2021', '2022', '2023', '2024', '2025 (Est)'],
-                    datasets: [{ data: [23.1, 25.5, 25.6, 26.3, 30.1, 33], fill: true, backgroundColor: eshkolotProfitGradient, borderColor: '#059669', pointBackgroundColor: '#ffffff', pointBorderColor: '#059669', tension: 0.4 }]
+                    labels: ['2020', '2021', '2022', '2023', '2024', '2025 (תחזית)'],
+                    datasets: [{
+                        data: [23.1, 25.5, 25.6, 26.3, 30.1, 33],
+                        fill: true,
+                        backgroundColor: getGradient(eshkolotProfitCtx, 'rgba(16, 185, 129, 0.4)', 'rgba(16, 185, 129, 0)'),
+                        borderColor: '#059669',
+                        borderWidth: 4,
+                        pointRadius: 6,
+                        tension: 0.45
+                    }]
                 },
-                options: {
-                    responsive: true, maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        title: { display: true, text: "מגמת צמיחה ברווח הנקי", font: { size: 20, weight: '700', family: 'Assistant' }, color: '#1e293b', padding: { bottom: 10 } },
-                         subtitle: { display: true, text: 'כניסה לתפקיד: מרץ 2021', font: { size: 14, family: 'Assistant' }, color: '#64748b', padding: { bottom: 20 } },
-                        tooltip: { enabled: true, backgroundColor: '#1e293b', padding: 12, cornerRadius: 8, displayColors: false, bodyFont: { family: 'Assistant' }, titleFont: { family: 'Assistant' }, callbacks: { label: (c) => `רווח נקי: ${c.parsed.y.toLocaleString()}M ILS` } },
-                    },
-                    scales: { y: { min: 22, title: { display: true, text: 'רווח נקי (במיליוני ש"ח)', font: { family: 'Assistant' } }, ticks: { callback: (v) => v + 'M' } }, x: { grid: { display: false } } }
-                }
+                options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { display: true, text: 'מגמת צמיחה ברווח הנקי (מיליוני ש"ח)', font: { size: 20, family: 'Assistant', weight: 'bold' } } }, scales: { ...sharedOptions.scales, y: { ...sharedOptions.scales.y, min: 22, ticks: { ...sharedOptions.scales.y.ticks, callback: (v) => v + 'M' } } } }
             });
 
-            // --- Chart 3: SHAHAM Revenue ---
             const revenueCtx = document.getElementById('shahamRevenueChart').getContext('2d');
-            const revenueGradient = revenueCtx.createLinearGradient(0, 0, 0, 400);
-            revenueGradient.addColorStop(0, 'rgba(34, 197, 94, 0.5)');
-            revenueGradient.addColorStop(1, 'rgba(34, 197, 94, 0)');
-
             new Chart(revenueCtx, {
                 type: 'line',
                 data: {
                     labels: ['2014', '2015', '2016', '2017', '2018', '2019', '2020'],
-                    datasets: [{ data: [2.16, 2.46, 2.70, 3.00, 3.87, 4.76, 4.75], fill: true, backgroundColor: revenueGradient, borderColor: '#22c55e', pointBackgroundColor: '#ffffff', pointBorderColor: '#22c55e', tension: 0.4 }]
+                    datasets: [{
+                        data: [2.16, 2.46, 2.70, 3.00, 3.87, 4.76, 4.75],
+                        fill: true,
+                        backgroundColor: getGradient(revenueCtx, 'rgba(34, 197, 94, 0.4)', 'rgba(34, 197, 94, 0)'),
+                        borderColor: '#22c55e',
+                        borderWidth: 4,
+                        pointRadius: 6,
+                        tension: 0.4
+                    }]
                 },
-                options: {
-                    responsive: true, maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        title: { display: true, text: "צמיחה בהכנסות", font: { size: 20, weight: '700', family: 'Assistant' }, color: '#1e293b', padding: { bottom: 10 } },
-                        subtitle: { display: true, text: 'כניסה לתפקיד: ספטמבר 2014', font: { size: 14, family: 'Assistant' }, color: '#64748b', padding: { bottom: 20 } },
-                        tooltip: { enabled: true, backgroundColor: '#1e293b', padding: 12, cornerRadius: 8, displayColors: false, bodyFont: { family: 'Assistant' }, titleFont: { family: 'Assistant' }, callbacks: { label: (c) => `הכנסות: ${c.parsed.y.toLocaleString()}M ILS` } },
-                    },
-                    scales: { y: { beginAtZero: true, title: { display: true, text: 'הכנסות (במיליוני ש"ח)', font: { family: 'Assistant' } } }, x: { grid: { display: false } } }
-                }
+                options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { display: true, text: 'צמיחה בהכנסות שח"ם (מיליוני ש"ח)', font: { size: 20, family: 'Assistant', weight: 'bold' } } }, scales: { ...sharedOptions.scales, y: { ...sharedOptions.scales.y, beginAtZero: true, ticks: { ...sharedOptions.scales.y.ticks, callback: (v) => v + 'M' } } } }
             });
 
-            // --- Chart 4: SHAHAM Surplus ---
             const surplusCtx = document.getElementById('shahamSurplusChart').getContext('2d');
-            const surplusGradient = surplusCtx.createLinearGradient(0, 0, 0, 400);
-            surplusGradient.addColorStop(0, 'rgba(59, 130, 246, 0.5)');
-            surplusGradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
-
             new Chart(surplusCtx, {
                 type: 'line',
                 data: {
                     labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
-                    datasets: [{ data: [3.6, 70.4, 200.4, 533.8, 784.4, 750.7], fill: true, backgroundColor: surplusGradient, borderColor: '#3b82f6', pointBackgroundColor: '#ffffff', pointBorderColor: '#3b82f6', tension: 0.4 }]
+                    datasets: [{
+                        data: [3.6, 70.4, 200.4, 533.8, 784.4, 750.7],
+                        fill: true,
+                        backgroundColor: getGradient(surplusCtx, 'rgba(59, 130, 246, 0.4)', 'rgba(59, 130, 246, 0)'),
+                        borderColor: '#3b82f6',
+                        borderWidth: 4,
+                        pointRadius: 6,
+                        tension: 0.4
+                    }]
                 },
-                options: {
-                    responsive: true, maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        title: { display: true, text: "יציבות ארגונית - צמיחה בעודף", font: { size: 20, weight: '700', family: 'Assistant' }, color: '#1e293b', padding: { bottom: 10 } },
-                        subtitle: { display: true, text: 'נתונים משנת 2015 ואילך', font: { size: 14, family: 'Assistant' }, color: '#64748b', padding: { bottom: 20 } },
-                        tooltip: { enabled: true, backgroundColor: '#1e293b', padding: 12, cornerRadius: 8, displayColors: false, bodyFont: { family: 'Assistant' }, titleFont: { family: 'Assistant' }, callbacks: { label: (c) => `עודף: ${c.parsed.y.toLocaleString()}K ILS` } }
-                    },
-                    scales: { y: { beginAtZero: true, title: { display: true, text: 'עודף (באלפי ש"ח)', font: { family: 'Assistant' } }, ticks: { callback: (v) => v + 'K' } }, x: { grid: { display: false } } }
-                }
+                options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { display: true, text: 'יציבות ארגונית - צמיחה בעודף (אלפי ש"ח)', font: { size: 20, family: 'Assistant', weight: 'bold' } } }, scales: { ...sharedOptions.scales, y: { ...sharedOptions.scales.y, beginAtZero: true, ticks: { ...sharedOptions.scales.y.ticks, callback: (v) => v + 'K' } } } }
             });
 
-            // --- Initialize Icons ---
             lucide.createIcons();
         });
     </script>
 </body>
 </html>
-
-
