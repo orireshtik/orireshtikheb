@@ -115,6 +115,35 @@
             transform: rotate(180deg);
         }
 
+        button[id$="-close-x"],
+        #global-video-close {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.75rem;
+            height: 2.75rem;
+            padding: 0 !important;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.22);
+            border: 2px solid rgba(255, 255, 255, 0.55);
+            color: #fff !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button[id$="-close-x"]:hover,
+        #global-video-close:hover {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: #fff;
+            color: #fff !important;
+        }
+
+        button[id$="-close-x"] svg,
+        #global-video-close svg {
+            width: 1.625rem !important;
+            height: 1.625rem !important;
+            stroke-width: 3 !important;
+        }
+
     </style>
 </head>
 
@@ -163,7 +192,7 @@
             <div class="bg-sky-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="eshkolot-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0"><img
                             src="https://eshkolot.co.il/wp-content/uploads/2017/07/eshkolot_logo.png" alt="לוגו אשכולות"
@@ -242,7 +271,7 @@
             <div class="bg-sky-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="eshkolot-revenue-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-sky-600"><i data-lucide="trending-up"
                             class="w-8 h-8"></i></div>
@@ -351,7 +380,7 @@
                 </div>
                 <button id="eshkolot-global-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-[2000] cursor-pointer pointer-events-auto"><i
-                        data-lucide="x" class="w-6 h-6 pointer-events-none"></i></button>
+                        data-lucide="x" class="w-7 h-7 pointer-events-none"></i></button>
                 <div class="flex items-center gap-4 relative z-10">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-indigo-600"><i data-lucide="globe-2"
                             class="w-8 h-8"></i></div>
@@ -457,7 +486,7 @@
             <div class="bg-rose-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="keren-eshkolot-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div
                         class="bg-white p-2 rounded-xl flex-shrink-0 text-rose-600 h-12 w-12 flex items-center justify-center overflow-hidden">
@@ -548,7 +577,7 @@
             <div class="bg-sky-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="eshkolot-regulatory-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-sky-600"><i data-lucide="landmark"
                             class="w-8 h-8"></i></div>
@@ -655,7 +684,7 @@
             <div class="bg-sky-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="eshkolot-ip-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-sky-600"><i data-lucide="gavel"
                             class="w-8 h-8"></i></div>
@@ -755,7 +784,7 @@
             <div class="bg-sky-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="eshkolot-stakeholders-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-sky-600"><i data-lucide="users-2"
                             class="w-8 h-8"></i></div>
@@ -890,7 +919,7 @@
             <div class="bg-violet-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="shaham-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0"><img
                             src="https://www.guidestar.org.il//servlet/servlet.FileDownload?file=00P2400000ESTGrEAP"
@@ -969,7 +998,7 @@
             <div class="bg-rose-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="shaham-neshama-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div
                         class="bg-white p-2 rounded-xl flex-shrink-0 text-rose-600 h-12 w-12 flex items-center justify-center overflow-hidden">
@@ -1030,7 +1059,7 @@
             <div class="bg-gradient-to-br from-cyan-500 to-sky-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-bd-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="rocket" class="h-6 w-6"></i></span>
@@ -1070,7 +1099,7 @@
             <div class="bg-gradient-to-br from-violet-600 to-purple-700 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-strategy-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="map" class="h-6 w-6"></i></span>
@@ -1116,7 +1145,7 @@
             <div class="bg-gradient-to-br from-emerald-500 to-teal-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-leadership-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="users-2" class="h-6 w-6"></i></span>
@@ -1163,7 +1192,7 @@
             <div class="bg-gradient-to-br from-amber-500 to-orange-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-subsidiaries-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="building-2" class="h-6 w-6"></i></span>
@@ -1203,7 +1232,7 @@
             <div class="bg-gradient-to-br from-rose-500 to-pink-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-business-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="line-chart" class="h-6 w-6"></i></span>
@@ -1249,7 +1278,7 @@
             <div class="bg-gradient-to-br from-blue-600 to-indigo-800 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-fintech-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="banknote" class="h-6 w-6"></i></span>
@@ -1295,7 +1324,7 @@
             <div class="bg-gradient-to-br from-red-500 to-rose-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-regulatory-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="scale" class="h-6 w-6"></i></span>
@@ -1335,7 +1364,7 @@
             <div class="bg-gradient-to-br from-sky-500 to-indigo-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-systems-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="layout-grid" class="h-6 w-6"></i></span>
@@ -1375,7 +1404,7 @@
             <div class="bg-gradient-to-br from-teal-500 to-cyan-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-turnaround-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="refresh-cw" class="h-6 w-6"></i></span>
@@ -1421,7 +1450,7 @@
             <div class="bg-gradient-to-br from-orange-500 to-red-500 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-negotiation-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="handshake" class="h-6 w-6"></i></span>
@@ -1464,7 +1493,7 @@
             <div class="bg-gradient-to-br from-fuchsia-600 to-purple-800 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="skills-matrix-lobbying-close-x" type="button"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="megaphone" class="h-6 w-6"></i></span>
@@ -1505,7 +1534,7 @@
             <div class="bg-violet-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="shaham-growth-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-violet-600"><i data-lucide="users-2"
                             class="w-8 h-8"></i></div>
@@ -1634,7 +1663,7 @@
             <div class="bg-violet-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="shaham-agreements-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-violet-600"><i data-lucide="handshake"
                             class="w-8 h-8"></i></div>
@@ -1827,7 +1856,7 @@
             <div class="bg-violet-600 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="shaham-placement-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-violet-600"><i data-lucide="heart-handshake"
                             class="w-8 h-8"></i></div>
@@ -1955,7 +1984,7 @@
                 </div>
                 <button id="shaham-international-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-[2000] cursor-pointer pointer-events-auto"><i
-                        data-lucide="x" class="w-6 h-6 pointer-events-none"></i></button>
+                        data-lucide="x" class="w-7 h-7 pointer-events-none"></i></button>
                 <div class="flex items-center gap-4 relative z-10">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-indigo-600"><i data-lucide="globe"
                             class="w-8 h-8"></i></div>
@@ -2053,7 +2082,7 @@
             <div class="bg-blue-800 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="nuis-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0"><img
                             src="https://upload.wikimedia.org/wikipedia/he/e/eb/NUIS_New_Logo.png"
@@ -2163,7 +2192,7 @@
             <div class="bg-slate-800 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="tau-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0"><img
                             src="https://upload.wikimedia.org/wikipedia/he/thumb/2/23/%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_%D7%90%D7%92%D7%95%D7%93%D7%AA_%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D_%D7%90%D7%95%D7%A0%D7%99%D7%91%D7%A8%D7%A1%D7%99%D7%98%D7%AA_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91_2009.svg/1920px-%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_%D7%90%D7%92%D7%95%D7%93%D7%AA_%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D_%D7%90%D7%95%D7%A0%D7%99%D7%91%D7%A8%D7%A1%D7%99%D7%98%D7%AA_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91_2009.svg.png"
@@ -2269,7 +2298,7 @@
             <div class="bg-indigo-700 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="che-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0"><img
                             src="https://upload.wikimedia.org/wikipedia/he/c/c7/Che-logo.png"
@@ -2357,7 +2386,7 @@
             <div class="bg-emerald-700 p-5 sm:p-7 text-white relative flex-shrink-0">
                 <button id="givatayim-close-x"
                     class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-6 h-6"></i></button>
+                        data-lucide="x" class="w-7 h-7"></i></button>
                 <div class="flex items-center gap-4">
                     <div class="bg-white p-2 rounded-xl flex-shrink-0"><img
                             src="https://www.givatayim.muni.il/content/images/logo.png" alt="לוגו עיריית גבעתיים"
@@ -3086,7 +3115,7 @@
                         </div>
                     </div>
 
-                    <details open class="group border-t border-slate-200">
+                    <details class="group border-t border-slate-200">
                         <summary
                             class="flex w-full cursor-pointer list-none items-center justify-between gap-3 bg-slate-100 px-6 py-4 sm:px-8 text-slate-800 text-sm sm:text-base font-semibold hover:bg-slate-200/80 transition-colors [&::-webkit-details-marker]:hidden">
                             <span class="flex items-center gap-2"><i data-lucide="layers"
@@ -3205,7 +3234,7 @@
                                 תמלוגים, באמצעות הקמת "זרוע שירות" המספקת מעטפת מקצועית וחלוקת הון רדום לאמנים.</span>
                         </p>
                     </div>
-                    <details open class="group border-t border-slate-100">
+                    <details class="group border-t border-slate-100">
                         <summary
                             class="flex w-full cursor-pointer list-none items-center justify-between gap-3 bg-slate-50 px-4 py-4 sm:px-6 md:px-8 text-slate-800 text-sm sm:text-base font-semibold hover:bg-slate-100 transition-colors [&::-webkit-details-marker]:hidden">
                             <span class="flex items-center gap-2"><i data-lucide="list-tree"
@@ -3337,7 +3366,7 @@
                         </p>
                     </div>
 
-                    <details open class="group border-t border-violet-100">
+                    <details class="group border-t border-violet-100">
                         <summary
                             class="flex w-full cursor-pointer list-none items-center justify-between gap-3 bg-violet-50/80 px-4 py-4 sm:px-6 md:px-8 text-violet-950 text-sm sm:text-base font-semibold hover:bg-violet-100/90 transition-colors [&::-webkit-details-marker]:hidden">
                             <span class="flex items-center gap-2"><i data-lucide="git-branch"
@@ -3805,7 +3834,7 @@
                     </p>
                 </div>
             </div>
-            <details open class="group border-t border-slate-200">
+            <details class="group border-t border-slate-200">
                 <summary
                     class="flex w-full cursor-pointer list-none items-center justify-between gap-3 bg-violet-50 px-6 py-4 sm:px-8 text-violet-950 text-sm sm:text-base font-semibold hover:bg-violet-100 transition-colors [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center gap-2"><i data-lucide="layers"
@@ -3883,7 +3912,7 @@
                         תחרותית בשוק ההכשרות המקצועיות.</span>
                 </p>
             </div>
-            <details open class="group mt-2 border-t border-slate-100 -mx-8 md:-mx-12 px-0">
+            <details class="group mt-2 border-t border-slate-100 -mx-8 md:-mx-12 px-0">
                 <summary
                     class="flex w-full cursor-pointer list-none items-center justify-between gap-3 bg-slate-50 px-8 py-4 md:px-12 text-slate-800 text-sm sm:text-base font-semibold hover:bg-slate-100 transition-colors [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center gap-2"><i data-lucide="layers"
@@ -4897,20 +4926,4 @@
                     options: {
                         responsive: true, maintainAspectRatio: false,
                         plugins: { legend: { display: false } },
-                        scales: { x: { grid: { display: false }, border: { display: false }, ticks: { color: '#94a3b8' } }, y: { display: false, min: 0, grid: { display: false } } }
-                    }
-                });
-            }
-
-            lucide.createIcons();
-        });
-    </script>
-
-    <!-- Global Video Modal -->
-    <div id="global-video-modal"
-        class="fixed inset-0 z-[3000] hidden items-center justify-center p-4 sm:p-6 bg-slate-900/90 backdrop-blur-sm transition-opacity duration-300">
-        <div
-            class="relative w-full max-w-5xl aspect-video bg-black rounded-2xl shadow-2xl overflow-hidden border border-slate-700 mx-auto mt-10">
-            <button id="global-video-close"
-                class="absolute -top-12 end-0 sm:top-4 sm:end-4 text-white hover:text-red-400 transition-colors p-2 z-[3010] cursor-pointer pointer-events-auto">
-                <i data-lucide="x" cla
+                        scales: { x: { grid
