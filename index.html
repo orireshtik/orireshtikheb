@@ -144,10 +144,126 @@
             stroke-width: 3 !important;
         }
 
+        .skills-matrix-modal-shell .modal-content>div:first-child::after {
+            content: "✦ דוגמאות נבחרות";
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 1rem;
+            padding: 0.35rem 0.7rem;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.18);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 10px 24px -18px rgba(15, 23, 42, 0.55);
+            font-size: 0.75rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
     </style>
 </head>
 
 <body class="gradient-bg text-slate-900 overflow-x-hidden text-justify">
+
+    <div id="first-visit-modal"
+        class="custom-modal fixed inset-0 z-[3000] hidden items-start sm:items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-sm overflow-y-auto">
+        <div
+            class="modal-content relative my-auto max-h-[calc(100vh-1.5rem)] w-full max-w-4xl overflow-y-auto rounded-[1.5rem] border border-white/70 bg-white shadow-2xl custom-scrollbar sm:max-h-[calc(100vh-2rem)] sm:rounded-[2rem]">
+            <button id="first-visit-close-button" type="button"
+                class="absolute left-3 top-3 z-30 flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-950 text-3xl font-black leading-none text-white shadow-xl ring-4 ring-white/90 transition hover:bg-white hover:text-slate-950 cursor-pointer sm:left-5 sm:top-5 sm:h-12 sm:w-12"
+                aria-label="סגירת חלון פתיחה">
+                ×
+            </button>
+            <div class="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
+                <div
+                    class="relative min-h-[12rem] overflow-hidden bg-gradient-to-br from-violet-700 via-indigo-700 to-slate-900 sm:min-h-[16rem] lg:min-h-full">
+                    <img src="https://eshkolot.co.il/wp-content/uploads/2025/09/%D7%90%D7%95%D7%A8%D7%99-%D7%A8%D7%A9%D7%98%D7%99%D7%A7-%D7%A7%D7%A8%D7%93%D7%99%D7%98-%D7%90%D7%9E%D7%A0%D7%93%D7%94-%D7%A1%D7%95%D7%A8%D7%95%D7%93%D7%99-1.jpg"
+                        alt="אורי רשטיק"
+                        class="h-full min-h-[12rem] w-full object-cover opacity-95 sm:min-h-[16rem]"
+                        onerror="this.src='https://placehold.co/520x520/7c3aed/ffffff?text=Ori+Reshtik'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/65 via-transparent to-transparent"></div>
+                    <div
+                        class="absolute right-3 top-3 z-10 flex items-center gap-2 rounded-2xl border border-white/25 bg-slate-950/55 px-3 py-2 shadow-lg backdrop-blur-md sm:right-5 sm:top-5"
+                        aria-label='גלובס 40 עד 40'>
+                        <img src="https://res.cloudinary.com/globes/image/upload/f_auto/v1609311634/Digital/40%20%D7%A2%D7%9C%2040/logo-red_elh3zm.svg"
+                            alt="40 עד 40" class="h-7 w-auto rounded bg-white/90 object-contain px-1 py-0.5 sm:h-8">
+                        <img src="https://www.ophirlaw.com/wp-content/uploads/2022/11/Globes-Logo.png"
+                            alt="גלובס" class="h-6 w-auto max-w-[4.5rem] rounded bg-white/90 object-contain px-1 py-0.5 sm:h-7">
+                    </div>
+                    <div class="absolute bottom-5 right-5 left-5 text-white">
+                        <p class="text-sm font-bold text-white/80">פורטפוליו מנהלים</p>
+                        <h2 class="mt-1 text-3xl font-black tracking-tight">אורי רשטיק</h2>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 bg-white p-4 sm:gap-5 sm:p-8 lg:p-10">
+                    <div>
+                        <p class="text-sm font-black uppercase tracking-[0.22em] text-indigo-500">Executive Snapshot</p>
+                        <h3 class="mt-2 text-2xl font-black leading-tight text-slate-900 sm:text-3xl">מיקוד מהיר לפני
+                            הצלילה לפורטפוליו</h3>
+                    </div>
+                    <p class="text-base leading-relaxed text-slate-700 sm:text-lg">
+                        מנהל בכיר המתמחה באסטרטגיה וצמיחה ארגונית, בעל למעלה מ-15 שנות ניסיון בהובלת תאגידים במגזר
+                        הפרטי והציבורי. מומחה בפיתוח עסקי, רה-ארגון פיננסי, ניהול כספים מורכב, רגולציה, דאטא,
+                        אינטגרציה ומערכות מידע.
+                    </p>
+                    <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+                        <div class="rounded-2xl border border-emerald-100 bg-emerald-50 px-3 py-2 text-center">
+                            <p class="text-lg font-black text-emerald-700">160%</p>
+                            <p class="text-[0.65rem] font-bold leading-tight text-emerald-900">גידול בהכנסות</p>
+                        </div>
+                        <div class="rounded-2xl border border-sky-100 bg-sky-50 px-3 py-2 text-center">
+                            <p class="text-lg font-black text-sky-700">1,400%</p>
+                            <p class="text-[0.65rem] font-bold leading-tight text-sky-900">צמיחה בהסכמים</p>
+                        </div>
+                        <div class="rounded-2xl border border-violet-100 bg-violet-50 px-3 py-2 text-center">
+                            <p class="text-lg font-black text-violet-700">15+</p>
+                            <p class="text-[0.65rem] font-bold leading-tight text-violet-900">שנות ניהול בכיר</p>
+                        </div>
+                        <div class="rounded-2xl border border-amber-100 bg-amber-50 px-3 py-2 text-center">
+                            <p class="text-lg font-black text-amber-700">Founder</p>
+                            <p class="text-[0.65rem] font-bold leading-tight text-amber-900">מערכים, חברות ויחידות</p>
+                        </div>
+                    </div>
+                    <div class="rounded-3xl border border-indigo-100 bg-gradient-to-br from-indigo-50 via-white to-sky-50 p-3 shadow-inner sm:p-4">
+                        <div class="mb-3 flex flex-col items-stretch justify-between gap-2 sm:flex-row sm:items-center sm:gap-3">
+                            <h4 class="text-base font-black text-slate-900">מפת יכולות ניהוליות ועסקיות</h4>
+                            <a href="#skills-map" id="first-visit-skills-btn"
+                                class="inline-flex w-full shrink-0 items-center justify-center rounded-full bg-indigo-600 px-3 py-2 text-xs font-black text-white shadow-sm transition hover:bg-indigo-700 sm:w-auto sm:py-1.5">
+                                למפה המלאה
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-2 gap-1.5 text-[0.62rem] font-black leading-tight sm:grid-cols-3 sm:gap-2 sm:text-[0.68rem]">
+                            <span class="rounded-xl bg-gradient-to-br from-cyan-500 to-sky-600 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">צמיחה ופיתוח עסקי</span>
+                            <span class="rounded-xl bg-gradient-to-br from-violet-600 to-purple-700 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">אסטרטגיה וביצוע</span>
+                            <span class="rounded-xl bg-gradient-to-br from-red-500 to-rose-600 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">רגולציה וקשרי ממשל</span>
+                            <span class="rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">אסטרטגיה עסקית</span>
+                            <span class="rounded-xl bg-gradient-to-br from-blue-600 to-indigo-800 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">פיננסים ותקציב</span>
+                            <span class="rounded-xl bg-gradient-to-br from-sky-500 to-indigo-600 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">מערכות ודאטה</span>
+                            <span class="rounded-xl bg-gradient-to-br from-slate-600 to-blue-700 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">תפעול ושירות</span>
+                            <span class="rounded-xl bg-gradient-to-br from-indigo-600 to-violet-700 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">הופעה וייצוג</span>
+                            <span class="rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">מנהיגות וניהול</span>
+                            <span class="rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">חברות בנות</span>
+                            <span class="rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">Turnaround</span>
+                            <span class="rounded-xl bg-gradient-to-br from-orange-500 to-red-500 px-2 py-1.5 text-white shadow-sm sm:px-2.5 sm:py-2">משא ומתן</span>
+                        </div>
+                    </div>
+                    <div class="grid gap-3 lg:grid-cols-2">
+                        <a href="#contact" id="first-visit-contact-btn"
+                            class="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-5 py-3 text-center text-sm font-black text-slate-800 shadow-sm transition hover:bg-white hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300">
+                            <i data-lucide="send" class="h-5 w-5"></i>
+                            צור קשר
+                        </a>
+                        <button id="first-visit-full-btn" type="button"
+                            class="flex w-full items-center justify-center gap-2 rounded-2xl bg-slate-900 px-4 py-3 text-center text-sm font-black text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 sm:px-6 sm:py-4 sm:text-base">
+                            מעבר לפורטפוליו המלא
+                            <i data-lucide="arrow-left" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ===== FLOATING CV DOWNLOAD WIDGET ===== -->
     <div id="cv-download-widget" class="fixed bottom-6 left-6 z-[2500] flex flex-col items-start gap-2" dir="rtl">
@@ -990,6 +1106,61 @@
         </div>
     </div>
 
+    <!-- LAHAV Modal -->
+    <div id="lahav-modal"
+        class="custom-modal fixed inset-0 z-[2000] hidden items-start sm:items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
+        <div
+            class="modal-content bg-white w-full max-w-3xl rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl border border-slate-100 my-auto">
+            <div class="bg-gradient-to-l from-violet-700 via-indigo-700 to-slate-900 p-5 sm:p-7 text-white relative flex-shrink-0">
+                <button id="lahav-close-x"
+                    class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
+                        data-lucide="x" class="w-7 h-7"></i></button>
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded-xl flex-shrink-0">
+                        <img src="https://lahav.org.il/wp-content/uploads/2026/03/lahav-logo.png"
+                            alt="לוגו להב" class="h-10 sm:h-12 object-contain">
+                    </div>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">חבר הנהלת להב - לשכת ארגוני העצמאים בישראל</h3>
+                        <p class="text-violet-100 text-xs sm:text-sm">קידום זכויות עצמאים, עסקים קטנים ובינוניים</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5 sm:p-8 md:p-10 space-y-5 overflow-y-auto flex-grow custom-scrollbar bg-slate-50">
+                <div class="bg-violet-50 border-s-4 border-violet-500 p-4 rounded-e-xl shadow-sm">
+                    <p class="text-violet-950 font-bold text-sm sm:text-base">
+                        <i data-lucide="zap" class="w-5 h-5 inline-block text-violet-600 mb-1 rtl:ml-1 ltr:mr-1"></i>
+                        השורה התחתונה (Bottom Line): <span class="font-normal">חברות הנהלה בארגון היציג של העצמאים בישראל, במהלך תקדימי שבו לראשונה נציג מהארגון שניהלתי (שח"ם) קיבל מושב בהנהלת להב; לצד פעילות לתיקון צו סיווג מבוטחים, קידום מתווי סיוע לעצמאים בתקופת הקורונה וחיזוק מעמד העצמאים בישראל.</span>
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
+                        <p class="text-sm font-bold text-slate-800 mb-1">מדיניות וחקיקה</p>
+                        <p class="text-xs leading-relaxed text-slate-600">פעילות לתיקון צו סיווג מבוטחים ולצמצום אפליות מבניות כלפי עצמאים.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
+                        <p class="text-sm font-bold text-slate-800 mb-1">סיוע בתקופת הקורונה</p>
+                        <p class="text-xs leading-relaxed text-slate-600">מעורבות בקידום מתווי סיוע לעצמאים ולעסקים קטנים ובינוניים בזמן משבר.</p>
+                    </div>
+                    <div class="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm">
+                        <p class="text-sm font-bold text-slate-800 mb-1">מעמד העצמאים</p>
+                        <p class="text-xs leading-relaxed text-slate-600">קידום הכרה ציבורית, ממשלתית וכלכלית בתרומת העצמאים למשק הישראלי.</p>
+                    </div>
+                </div>
+                <div class="space-y-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                    <p class="text-justify">להב - לשכת ארגוני העצמאים בישראל, הוקמה בשנת 1983 כדי לייצג, לקדם ולפעול בעניינו של מגזר העובדים העצמאיים והעסקים הקטנים והבינוניים.</p>
+                    <p class="text-justify">להב פועלת להגנה על זכויות העצמאים והעסקים הקטנים והבינוניים בתחום הכלכלי, לתיקון אפליות עבר, למניעת עיוותים חדשים ולקידום שוויון בחקיקה.</p>
+                    <p class="text-justify">להב היא הארגון היציג של העצמאים והעסקים הקטנים והבינוניים, המהווים כ-98% מהעסקים בישראל ומנוע צמיחה מרכזי במשק. המגזר מונה למעלה מ-530,000 מפרנסים ויזמים עצמאיים ומעסיק עוד כ-700,000 שכירים.</p>
+                    <p class="text-justify">הארגון מונה 71 ארגונים עצמאיים וארגונים מקצועיים, ובהם כ-250,000 חברים, ופועל מול רשויות המדינה ליצירת סביבה כלכלית התומכת בצמיחה, שגשוג והוגנות עבור עצמאים ועסקים קטנים ובינוניים.</p>
+                </div>
+            </div>
+            <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button
+                    id="lahav-close-btn"
+                    class="w-full sm:w-auto bg-slate-800 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition-all focus:outline-none">סגירה</button>
+            </div>
+        </div>
+    </div>
+
     <!-- SHAHAM NESHAMA Modal -->
     <div id="shaham-neshama-modal"
         class="custom-modal fixed inset-0 z-[2000] hidden items-start sm:items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
@@ -1071,18 +1242,29 @@
             </div>
             <div class="skills-matrix-modal-body p-5 sm:p-8 space-y-3 overflow-y-auto flex-grow custom-scrollbar bg-slate-50">
                 <ul class="space-y-3 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
-                    <li class="text-justify"><a href="#eshkolot-charts"
-                            class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">באשכולות</a>
+                    <li class="text-justify"><a href="#eshkolot-revenue-trigger" data-modal-trigger="eshkolot-revenue-trigger"
+                            class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">אשכולות</a>
                         — הרחבת פורטפוליו מ-4 הסכמים ל־60+ הסכמי מדיה פעילים.</li>
                     <li class="text-justify"><a href="#shaham-agreements-trigger" data-modal-trigger="shaham-agreements-trigger"
                             class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">הרחבת
                             תחומי הפעילות בשח״ם</a></li>
+                    <li class="text-justify"><a href="#eshkolot-charts"
+                            class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">הגדלת
+                            הכנסות אשכולות ב־50%</a></li>
+                    <li class="text-justify"><a href="#shaham-pnl-training"
+                            class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">הקמת
+                            יחידת רווח והפסד (P&amp;L) בשח"ם: מערך ההכשרה המקצועית</a></li>
                     <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
                             class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">התאחדות
                             הסטודנטים</a> — נדל״ן מניב וזרועות עסקיות להשקעות חברתיות.</li>
                     <li class="text-justify"><a href="#eshkolot-global-trigger" data-modal-trigger="eshkolot-global-trigger"
                             class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">התרחבות
                             אסטרטגית לשווקים גלובליים באשכולות</a> — פיתוח אפיקי הכנסה והתרחבות בינלאומית מול שוקי חוץ.</li>
+                    <li class="text-justify"><span class="font-semibold text-sky-900">שיווק, דיגיטל וקמפיינים</span> —
+                        ניהול ספקי שיווק חיצוניים, קמפיינים, הנחיית תכנים והפעלת ערוצי צמיחה דיגיטליים.</li>
+                    <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="tau-info-trigger"
+                            class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">הרחבת
+                            חברות בנות ומוצרים באגודת הסטודנטים באוניברסיטת תל אביב</a></li>
                 </ul>
             </div>
             <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
@@ -1104,31 +1286,31 @@
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="map" class="h-6 w-6"></i></span>
                     <div>
-                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">אסטרטגיה ארגונית ופירוק למהלכים</h3>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">אסטרטגיה ארגונית וביצוע טקטי</h3>
                         <p class="text-violet-100 text-xs sm:text-sm">Strategic Planning · Roadmap · תוצאות מדידות</p>
                     </div>
                 </div>
             </div>
             <div class="skills-matrix-modal-body p-5 sm:p-8 space-y-3 overflow-y-auto flex-grow custom-scrollbar bg-slate-50">
                 <ul class="space-y-3 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
-                    <li class="text-justify"><a href="#eshkolot-charts"
-                            class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">Turnaround
-                            פיננסי באשכולות</a> — תקציב מובטח ‎+240%‎.</li>
                     <li class="text-justify"><a href="#eshlam-project"
                             class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">באשכולות
-                            — שינוי מודל חלוקה עם שותפים ‎(64/36)‎</a> — תכנון וביצוע מהלך לשינוי יחסי הכוחות הכלכליים לטובת המבצעים.</li>
-                    <li class="text-justify"><a href="#che-info-trigger" data-modal-trigger="che-info-trigger"
-                            class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">מל״ג</a>
-                        — מדיניות ותקצוב השכלה גבוהה.</li>
-                    <li class="text-justify"><a href="#givatayim-info-trigger" data-modal-trigger="givatayim-info-trigger"
-                            class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">עיריית
-                            גבעתיים</a> — פיתוח עירוני ודיור לצעירים.</li>
+                            — שינוי מודל חלוקה עם שותפים ‎(64/36)‎</a> — תכנון וביצוע מהלך לשינוי יחסי הכוחות הכלכליים לטובת הכנסות החברה.</li>
+                    <li class="text-justify"><a href="#project-eshkolot-financial"
+                            class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">איתור
+                            ופדיון נכסים פיננסיים וחלוקת הון אסטרטגית באשכולות</a></li>
+                    <li class="text-justify"><a href="#shaham-placement-trigger" data-modal-trigger="shaham-placement-trigger"
+                            class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">הקמת
+                            יחידת תעסוקה בשח"ם</a></li>
                     <li class="text-justify"><a href="#shaham-market-leader-card"
                             class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">מיצוב
                             כמובילי שוק בשח״ם</a> — ביסוס פרסי שח״ם כאירוע הדגל של התעשייה.</li>
                     <li class="text-justify"><a href="#shaham-agreements-trigger" data-modal-trigger="shaham-agreements-trigger"
                             class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">גיוון
                             אפיקי פעילות והסכמים אסטרטגיים בשח״ם</a> — הרחבת פעילות והסכמי התקשרות אסטרטגיים.</li>
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                            class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">יוזמות
+                            חברתיות כלכליות בהתאחדות הסטודנטים</a></li>
                 </ul>
             </div>
             <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
@@ -1150,7 +1332,7 @@
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="users-2" class="h-6 w-6"></i></span>
                     <div>
-                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">מנהיגות בכירה וניהול משאב אנושי</h3>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">מנהיגות בכירה, ניהול מנהלים וניהול משאב אנושי</h3>
                         <p class="text-emerald-100 text-xs sm:text-sm">Executive Leadership · צוותים · מהלכי שינוי</p>
                     </div>
                 </div>
@@ -1159,14 +1341,19 @@
                 <ul class="space-y-3 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
                     <li class="text-justify"><a href="#eshkolot"
                             class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">מנכ״ל
-                            אשכולות</a> — כ־35 עובדים, מטריציוני, <strong class="font-bold text-violet-900">כולל ניהול פורום
-                            מנהלים</strong>.</li>
+                            אשכולות</a> — כ־35 עובדים, מטריציוני, כולל ניהול פורום מנהלים.</li>
+                    <li class="text-justify"><span class="font-semibold text-violet-900">בניית היררכיה ארגונית והגדרות
+                            תפקיד</span> — גיבוש מבנה ארגוני, הגדרת תחומי אחריות, גיוס, פיתוח וקידום עובדים.</li>
+                    <li class="text-justify"><span class="font-semibold text-violet-900">ניהול צוותי מנהלים ועובדים</span> —
+                        הצבת יעדים, בקרת ביצוע, ליווי מקצועי שוטף ופיתוח שכבת ניהול.</li>
                     <li class="text-justify"><a href="#shaham-growth-trigger" data-modal-trigger="shaham-growth-trigger"
-                            class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">צמיחה
-                            בשח״ם</a> — טרנספורמציה, ‎+40%‎ בבסיס לקוחות.</li>
+                            class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">שח״ם
+                            — ניהול מנהלים וצמיחה</a> — טרנספורמציה, ‎+40%‎ בבסיס לקוחות.</li>
                     <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
                             class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">התאחדות
                             הסטודנטים</a> — ארגון גג ~330,000 צעירים.</li>
+                    <li class="text-justify"><span class="font-semibold text-violet-900">ניהול פרויקטים קהילתיים</span> —
+                        בניית תקציב ולוחות זמנים, תיאום וסנכרון מול גורמים שונים והנעה לעמידה ביעדים.</li>
                     <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="tau-info-trigger"
                             class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">אגודת
                             הסטודנטים ת״א</a> — שלד ארגוני ~80 עובדים.</li>
@@ -1247,7 +1434,7 @@
                     <li class="text-justify"><a href="#shaham-pnl-training"
                             class="font-semibold text-amber-800 underline decoration-amber-200 underline-offset-2 hover:text-amber-950">הקמת
                             P&amp;L להכשרות מקצועיות ושיבוש שוק</a> — בשח״ם.</li>
-                    <li class="text-justify"><a href="#shaham-agreements-trigger" data-modal-trigger="shaham-agreements-trigger"
+                    <li class="text-justify"><a href="#shaham-charts"
                             class="font-semibold text-amber-800 underline decoration-amber-200 underline-offset-2 hover:text-amber-950">אופטימיזציה
                             בשח״ם</a> — שיפור מודל ההכנסות והרווחיות.</li>
                     <li class="text-justify"><a href="#shaham-pnl-training"
@@ -1259,9 +1446,16 @@
                     <li class="text-justify"><a href="#eshkolot-revenue-trigger" data-modal-trigger="eshkolot-revenue-trigger"
                             class="font-semibold text-amber-800 underline decoration-amber-200 underline-offset-2 hover:text-amber-950">כריכת
                             הסכמים עם גופי מדיה</a> — באשכולות.</li>
+                    <li class="text-justify"><span class="font-semibold text-amber-900">מחקר שוק, מתחרים ובדיקות היתכנות</span> —
+                        הכרת צרכי שוק, ניתוח שימושים, בדיקת כדאיות והערכת סיכונים לפני הרחבת פעילות.</li>
+                    <li class="text-justify"><span class="font-semibold text-amber-900">איתור לקוחות ושותפים אסטרטגיים</span> —
+                        פגישות עם לקוחות אסטרטגיים, ניהול מו״מ, סגירת עסקאות ומעקב אחר מימוש הסכמים.</li>
                     <li class="text-justify"><a href="#eshlam-project"
                             class="font-semibold text-amber-800 underline decoration-amber-200 underline-offset-2 hover:text-amber-950">אשכולות
                             — Joint Venture אסטרטגי</a> — הקמת JV לשינוי מודל ההכנסות.</li>
+                    <li class="text-justify"><a href="#shaham-agreements-trigger" data-modal-trigger="shaham-agreements-trigger"
+                            class="font-semibold text-amber-800 underline decoration-amber-200 underline-offset-2 hover:text-amber-950">גיוון
+                            אפיקים והסכמים אסטרטגיים בשח"ם</a></li>
                 </ul>
             </div>
             <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
@@ -1283,8 +1477,8 @@
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="banknote" class="h-6 w-6"></i></span>
                     <div>
-                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">מנועים פיננסיים ואוטומציה</h3>
-                        <p class="text-indigo-100 text-xs sm:text-sm">פינטק · Fintech · DaaS · סליקה · ממשק מסים</p>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">מנועים פיננסיים, תקציב ואוטומציה</h3>
+                        <p class="text-indigo-100 text-xs sm:text-sm">P&amp;L · תקציב · תזרים · Fintech · אוטומציה</p>
                     </div>
                 </div>
             </div>
@@ -1292,20 +1486,20 @@
                 <ul class="space-y-3 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
                     <li class="text-justify"><a href="#project-eshkolot-digital"
                             class="font-semibold text-cyan-800 underline decoration-cyan-200 underline-offset-2 hover:text-cyan-950">מערכת
-                            דיגיטלית באשכולות</a> — פיתוח מערכת לניהול הסכמים ומעקב אחרי ביצועים.</li>
-                    <li class="text-justify"><a href="#project-eshkolot-financial"
-                            class="font-semibold text-cyan-800 underline decoration-cyan-200 underline-offset-2 hover:text-cyan-950">מערכת
-                            פיננסית באשכולות</a> — אוטומציה של תהליכי חיוב וגבייה.</li>
+                            אקו-סיסטם דיגיטלית וניהול תמלוגים מקצה לקצה</a></li>
+                    <li class="text-justify"><span class="font-semibold text-cyan-900">ניהול תקציב, תזרים ובקרה</span> —
+                        ניהול תקציב של עשרות מיליוני ש״ח, עמידה ביעדים, בקרת תזרים ומדדי ביצוע.</li>
+                    <li class="text-justify"><span class="font-semibold text-cyan-900">מודלים כלכליים לחלוקת רווחים</span> —
+                        אפיון ופיתוח מודלים לחלוקת רווחים לבעלי מניות, כולל פיקוח ובקרת תהליכים.</li>
                     <li class="text-justify"><a href="#shaham-growth-trigger" data-modal-trigger="shaham-growth-trigger"
                             class="font-semibold text-cyan-800 underline decoration-cyan-200 underline-offset-2 hover:text-cyan-950">מערכות
                             הכנסה בשח״ם</a> — פיתוח מערכות לניהול הכנסות ותשלומים.</li>
-                    <li class="text-justify"><a href="#eshkolot-charts"
-                            class="font-semibold text-cyan-800 underline decoration-cyan-200 underline-offset-2 hover:text-cyan-950">איתור
-                            ופדיון הכנסות באשכולות</a> — מיפוי אפיקים ומימוש הכנסות.</li>
                     <li class="text-justify"><a href="#shaham-neshama-trigger" data-modal-trigger="shaham-neshama-trigger"
                             class="font-semibold text-cyan-800 underline decoration-cyan-200 underline-offset-2 hover:text-cyan-950">קמפיין
-                            גיוס המוני</a> — בשחקני נשמה; מנועי גיוס ותשלומים.</li>
-                    <li class="text-justify"><a href="#eshkolot"
+                            גיוס המונים</a> — מנועי גיוס ותשלומים.</li>
+                    <li class="text-justify"><span class="font-semibold text-cyan-900">גיוס תרומות ומשאבים בארץ ובחו״ל</span> —
+                        פיתוח קשרים עם אנשי עסקים וגורמים רלוונטיים, הצגת פעילות וגיוס משאבים לפעילות הארגון.</li>
+                    <li class="text-justify"><a href="#project-eshkolot-digital"
                             class="font-semibold text-cyan-800 underline decoration-cyan-200 underline-offset-2 hover:text-cyan-950">אקו-סיסטם
                             מקצה לקצה באשכולות</a> — חיבור בין דיגיטל, פיננסים ותפעול.</li>
                 </ul>
@@ -1329,8 +1523,8 @@
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="scale" class="h-6 w-6"></i></span>
                     <div>
-                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">רגולציה, חקיקה וממשק ממשל</h3>
-                        <p class="text-rose-100 text-xs sm:text-sm">Regulatory Affairs · חקיקה · ממשק רגולטורים</p>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">רגולציה, חקיקה, קשרי ממשל וקידום מדיניות</h3>
+                        <p class="text-rose-100 text-xs sm:text-sm">Regulatory Affairs · Policy · Advocacy · לובי · ממשק ממשל</p>
                     </div>
                 </div>
             </div>
@@ -1339,15 +1533,27 @@
                     <li class="text-justify"><a href="#eshkolot-regulatory-trigger" data-modal-trigger="eshkolot-regulatory-trigger"
                             class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">חוק
                             זכויות מבצעים — VOD וסטרימינג</a> — חקיקה בכנסת להחלת חובת תמלוגים על שירותי צפייה.</li>
+                    <li class="text-justify"><a href="#shaham-safety-net"
+                            class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">דמי
+                            אבטלה לפרילנסרים ורשת ביטחון בשח״ם</a> — לובינג מול משרדי הממשלה לקידום רשת ביטחון לאמנים ופרילנסרים.</li>
+                    <li class="text-justify"><a href="#eshkolot-regulatory-trigger" data-modal-trigger="eshkolot-regulatory-trigger"
+                            class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">לוביזם
+                            בכנסת ובמשרדי ממשלה</a> — דיונים בוועדות מול רגולטורים, תאגידי ענק ונציגי ממשלה.</li>
                     <li class="text-justify"><a href="#eshkolot-ip-trigger" data-modal-trigger="eshkolot-ip-trigger"
                             class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">בג״ץ
                             (2021)</a> — עתירה תקדימית להכללת ציוד קצה חכם במנגנוני פיצוי על קניין רוחני.</li>
-                    <li class="text-justify"><a href="#eshkolot-regulatory-trigger" data-modal-trigger="eshkolot-regulatory-trigger"
-                            class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">לוביזם
-                            בכנסת ובמשרדים</a> — דיונים בוועדות מול רגולטורים, תאגידי ענק ונציגי ממשלה.</li>
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                            class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">תקציבים
+                            למעונות וסטודנטים בפריפריה</a> — גיוס ושחרור תקציבים לאומיים בהתאחדות הסטודנטים.</li>
+                    <li class="text-justify"><a href="#shaham-international-trigger" data-modal-trigger="shaham-international-trigger"
+                            class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">קמפיין
+                            סיכול BDS</a> — ניהול משבר מול ניסיונות ביטול הוועידה האירופית של FIA בישראל.</li>
                     <li class="text-justify"><a href="#che-info-trigger" data-modal-trigger="che-info-trigger"
                             class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">מל״ג
                             — פיקוח ורגולציה</a> — כהונה במל״ג ושותפות בוועדת הפיקוח והאכיפה.</li>
+                    <li class="text-justify"><a href="#lahav-trigger" data-modal-trigger="lahav-trigger"
+                            class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">חבר
+                            הנהלת להב</a> — ייצוג תקדימי של שח״ם בהנהלת לשכת ארגוני העצמאים וקידום מעמד העצמאים בישראל.</li>
                 </ul>
             </div>
             <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
@@ -1381,17 +1587,101 @@
                             לענן (AWS)</a> — מעבר מ-Legacy למערכת Cloud-Native אחודה באשכולות.</li>
                     <li class="text-justify"><a href="#project-eshkolot-digital"
                             class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">אינטגרציית
-                            אקו-סיסטם</a> — שידור, אקו״ם ופורטל אמנים דיגיטלי.</li>
+                            אקו-סיסטם</a> — שידור, עיבוד מידע, תשלומים ופורטל אמנים דיגיטלי.</li>
                     <li class="text-justify"><a href="#shaham-growth-trigger" data-modal-trigger="shaham-growth-trigger"
                             class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">CRM
-                            בשח״ם</a> — לשיפור שירות ושימור לקוחות (בהקשר צמיחת בסיס חברים).</li>
+                            בשח״ם</a> — לשיפור שירות ושימור לקוחות.</li>
                     <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="tau-info-trigger"
                             class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">דיגיטציה
-                            באגודת הסטודנטים</a> — חתימות דיגיטליות וסנכרון מול שע״ם.</li>
+                            באגודת הסטודנטים.</a></li>
+                    <li class="text-justify"><a href="#eshkolot-revenue-trigger" data-modal-trigger="eshkolot-revenue-trigger"
+                            class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">ניהול
+                            מו"מ מבוסס דאטא</a>.</li>
                 </ul>
             </div>
             <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
                     id="skills-matrix-systems-close-btn"
+                    class="w-full sm:w-auto bg-slate-800 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition-all focus:outline-none">סגירה</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills-matrix-modal-ops"
+        class="skills-matrix-modal-shell custom-modal fixed inset-0 z-[2000] hidden items-start sm:items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
+        <div
+            class="modal-content bg-white w-full max-w-2xl rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl border border-slate-100 my-auto flex flex-col max-h-[min(92vh,44rem)]">
+            <div class="bg-gradient-to-br from-slate-600 to-blue-700 p-5 sm:p-7 text-white relative flex-shrink-0">
+                <button id="skills-matrix-ops-close-x" type="button"
+                    class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
+                        data-lucide="x" class="w-7 h-7"></i></button>
+                <div class="flex items-center gap-4">
+                    <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
+                            data-lucide="headset" class="h-6 w-6"></i></span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">תפעול, שירות ו-CX</h3>
+                        <p class="text-blue-100 text-xs sm:text-sm">Customer Ops · SLA · CRM · נהלים · שירות</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-matrix-modal-body p-5 sm:p-8 space-y-3 overflow-y-auto flex-grow custom-scrollbar bg-slate-50">
+                <ul class="space-y-3 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
+                    <li class="text-justify"><a href="#project-eshkolot-digital"
+                            class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">הקמת
+                            מוקד שירות לקוחות באשכולות</a> — בניית נהלים, יעדי SLA, מערכות מידע תומכות, גיוס צוות והטמעת שגרות עבודה.</li>
+                    <li class="text-justify"><a href="#shaham-growth-trigger" data-modal-trigger="shaham-growth-trigger"
+                            class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">CRM
+                            ושימור לקוחות בשח״ם</a> — שיפור תהליכי שירות, Retention וניהול קשר שוטף עם לקוחות וחברי ארגון.</li>
+                    <li class="text-justify"><span class="font-semibold text-blue-900">בניית תהליכי עבודה ובקרה</span> —
+                        הגדרת מדדים, יעדים, אחריות ובקרת ביצוע שוטפת.</li>
+                    <li class="text-justify"><a href="#role-shaham-ceo"
+                            class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">ניהול
+                            ספקים ונותני שירות</a> — עבודה מול ספקים, יועצים ומדריכים חיצוניים, כולל מו״מ וסגירת התקשרויות.</li>
+                </ul>
+            </div>
+            <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
+                    id="skills-matrix-ops-close-btn"
+                    class="w-full sm:w-auto bg-slate-800 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition-all focus:outline-none">סגירה</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills-matrix-modal-branding"
+        class="skills-matrix-modal-shell custom-modal fixed inset-0 z-[2000] hidden items-start sm:items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
+        <div
+            class="modal-content bg-white w-full max-w-2xl rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl border border-slate-100 my-auto flex flex-col max-h-[min(92vh,44rem)]">
+            <div class="bg-gradient-to-br from-indigo-600 to-violet-700 p-5 sm:p-7 text-white relative flex-shrink-0">
+                <button id="skills-matrix-branding-close-x" type="button"
+                    class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
+                        data-lucide="x" class="w-7 h-7"></i></button>
+                <div class="flex items-center gap-4">
+                    <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
+                            data-lucide="presentation" class="h-6 w-6"></i></span>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">יכולת הופעה וייצוג</h3>
+                        <p class="text-indigo-100 text-xs sm:text-sm">Public Presence · Representation · מדיה</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-matrix-modal-body p-5 sm:p-8 space-y-3 overflow-y-auto flex-grow custom-scrollbar bg-slate-50">
+                <ul class="space-y-3 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
+                    <li class="text-justify"><a href="#globes-40-under-40"
+                            class="font-semibold text-indigo-800 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-950">גלובס
+                            40 עד 40 לשנת 2020</a> — הכרה ציבורית כמנהל צעיר ומשפיע במשק הישראלי.</li>
+                    <li class="text-justify"><a href="#eshkolot-ynet-podcast"
+                            class="font-semibold text-indigo-800 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-950">צפו
+                            בפודקאסט Ynet</a> — הצגת תפיסת ניהול, מנהיגות והשפעה עסקית מול קהל רחב.</li>
+                    <li class="text-justify"><a href="#eshkolot-regulatory-trigger" data-modal-trigger="eshkolot-regulatory-trigger"
+                            class="font-semibold text-indigo-800 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-950">ייצוג
+                            מול ועדות הכנסת</a> — הופעה וייצוג בדיונים מול מקבלי החלטות, רגולטורים ותאגידי ענק.</li>
+                    <li class="text-justify"><a href="#additional-roles"
+                            class="font-semibold text-indigo-800 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-950">חברות
+                            בהנהלות וראשות דירקטוריונים</a> — נוכחות הנהגתית בממשקים ציבוריים, תאגידיים ודירקטוריוניים.</li>
+                    <li class="text-justify"><span class="font-semibold text-indigo-900">ממשל תאגידי ועבודה מול דירקטוריונים</span> —
+                        בניית תקנון, עבודה מול רשם החברות, גיוס דירקטורים וכתיבת תקנון חברה מחדש.</li>
+                </ul>
+            </div>
+            <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
+                    id="skills-matrix-branding-close-btn"
                     class="w-full sm:w-auto bg-slate-800 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition-all focus:outline-none">סגירה</button>
             </div>
         </div>
@@ -1427,7 +1717,7 @@
                             — קפיצת מדדים (פי 3)</a> — צמיחה מהירה בבסיס לקוחות ובמנועי פעילות.</li>
                     <li class="text-justify"><a href="#shaham-achievements"
                             class="font-semibold text-teal-800 underline decoration-teal-200 underline-offset-2 hover:text-teal-950">שח״ם
-                            — הישגים אסטרטגיים</a> — אריזת מהלכי צמיחה, גיוון והובלת שוק תחת לחץ.</li>
+                            — הישגים אסטרטגיים</a> — הובלת מהלכי צמיחה, גיוון והובלת שוק תחת לחץ.</li>
                     <li class="text-justify"><span class="font-semibold text-teal-900">החייאת עמותות</span> — <a
                             href="#keren-modal-trigger" data-modal-trigger="keren-modal-trigger"
                             class="text-teal-800 underline decoration-teal-200 underline-offset-2 hover:text-teal-950">קרן
@@ -1455,8 +1745,8 @@
                     <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
                             data-lucide="handshake" class="h-6 w-6"></i></span>
                     <div>
-                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">משא ומתן אסטרטגי בסיכון גבוה</h3>
-                        <p class="text-orange-50 text-xs sm:text-sm">High-Stakes Negotiation · מסגרות · בינלאומי</p>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">משא ומתן מורכב</h3>
+                        <p class="text-orange-50 text-xs sm:text-sm">Complex Negotiation · מסגרות · בינלאומי</p>
                     </div>
                 </div>
             </div>
@@ -1481,46 +1771,6 @@
             </div>
             <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
                     id="skills-matrix-negotiation-close-btn"
-                    class="w-full sm:w-auto bg-slate-800 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition-all focus:outline-none">סגירה</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="skills-matrix-modal-lobbying"
-        class="skills-matrix-modal-shell custom-modal fixed inset-0 z-[2000] hidden items-start sm:items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
-        <div
-            class="modal-content bg-white w-full max-w-2xl rounded-[2rem] sm:rounded-[2.5rem] shadow-2xl border border-slate-100 my-auto flex flex-col max-h-[min(92vh,44rem)]">
-            <div class="bg-gradient-to-br from-fuchsia-600 to-purple-800 p-5 sm:p-7 text-white relative flex-shrink-0">
-                <button id="skills-matrix-lobbying-close-x" type="button"
-                    class="absolute top-4 end-4 sm:top-6 sm:end-6 text-white/80 hover:text-white transition-colors p-2 rounded-full hover:bg-white/10 z-50 cursor-pointer"><i
-                        data-lucide="x" class="w-7 h-7"></i></button>
-                <div class="flex items-center gap-4">
-                    <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-2 ring-white/30"><i
-                            data-lucide="megaphone" class="h-6 w-6"></i></span>
-                    <div>
-                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">קידום מדיניות ולובינג</h3>
-                        <p class="text-fuchsia-100 text-xs sm:text-sm">Policy · Advocacy · קמפיינים לאומיים</p>
-                    </div>
-                </div>
-            </div>
-            <div class="skills-matrix-modal-body p-5 sm:p-8 space-y-3 overflow-y-auto flex-grow custom-scrollbar bg-slate-50">
-                <ul class="space-y-3 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
-                    <li class="text-justify"><a href="#shaham-safety-net"
-                            class="font-semibold text-purple-800 underline decoration-purple-200 underline-offset-2 hover:text-purple-950">דמי
-                            אבטלה לפרילנסרים</a> — לובינג מול משרדי הממשלה (רשת ביטחון בשח״ם).</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
-                            class="font-semibold text-purple-800 underline decoration-purple-200 underline-offset-2 hover:text-purple-950">תקציבים
-                            למעונות וסטודנטים בפריפריה</a> — גיוס ושחרור תקציבים לאומיים (התאחדות הסטודנטים).</li>
-                    <li class="text-justify"><a href="#shaham-international-trigger" data-modal-trigger="shaham-international-trigger"
-                            class="font-semibold text-purple-800 underline decoration-purple-200 underline-offset-2 hover:text-purple-950">קמפיין
-                            סיכול BDS</a> — ניהול משבר מול ניסיונות ביטול הוועידה האירופית של FIA בישראל.</li>
-                    <li class="text-justify"><a href="#eshkolot-regulatory-trigger" data-modal-trigger="eshkolot-regulatory-trigger"
-                            class="font-semibold text-purple-800 underline decoration-purple-200 underline-offset-2 hover:text-purple-950">חקיקת
-                            חוק זכויות מבצעים</a> — ייצוג אינטרסים לאומיים בכנסת ובממשק הרגולטורי.</li>
-                </ul>
-            </div>
-            <div class="p-6 border-t border-slate-100 flex justify-end bg-white flex-shrink-0"><button type="button"
-                    id="skills-matrix-lobbying-close-btn"
                     class="w-full sm:w-auto bg-slate-800 text-white px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition-all focus:outline-none">סגירה</button>
             </div>
         </div>
@@ -1668,8 +1918,8 @@
                     <div class="bg-white p-2 rounded-xl flex-shrink-0 text-violet-600"><i data-lucide="handshake"
                             class="w-8 h-8"></i></div>
                     <div>
-                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">הסכמים קיבוציים אסטרטגיים</h3>
-                        <p class="text-violet-100 text-xs sm:text-sm">פיתוח עסקי והרחבת פורטפוליו מגזרי</p>
+                        <h3 class="text-xl sm:text-2xl font-bold leading-tight">גיוון אפיקים והסכמים אסטרטגיים</h3>
+                        <p class="text-violet-100 text-xs sm:text-sm">הרחבת הפעילות לצד הבטחת הסכמי התקשרות אסטרטגיים במגוון ענפים</p>
                     </div>
                 </div>
             </div>
@@ -2469,7 +2719,20 @@
     <div class="mx-auto w-full max-w-[min(100%,112rem)] overflow-x-hidden px-4 py-8 sm:px-6 lg:px-8 xl:px-10 sm:py-14 fade-in">
         <!-- Hero Section -->
         <section id="overview" class="mb-14 sm:mb-16">
-            <div class="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-slate-100">
+            <div class="relative bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-slate-100">
+                <a href="https://orireshtik.github.io/orireshtikeng/" target="_blank" rel="noopener noreferrer"
+                    class="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/95 px-4 py-2.5 text-sm font-black text-blue-800 shadow-md backdrop-blur transition-all hover:-translate-y-0.5 hover:border-blue-400 hover:text-blue-900 hover:shadow-lg sm:left-5 sm:top-5 sm:px-5 sm:text-base"
+                    aria-label="English portfolio">
+                    <svg class="h-4 w-6 rounded-[0.2rem] shadow-sm ring-1 ring-slate-200 sm:h-5 sm:w-7"
+                        viewBox="0 0 60 40" aria-hidden="true" role="img">
+                        <rect width="60" height="40" fill="#012169" />
+                        <path d="M0 0 60 40M60 0 0 40" stroke="#fff" stroke-width="8" />
+                        <path d="M0 0 60 40M60 0 0 40" stroke="#C8102E" stroke-width="4" />
+                        <path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="13" />
+                        <path d="M30 0v40M0 20h60" stroke="#C8102E" stroke-width="8" />
+                    </svg>
+                    <span>EN</span>
+                </a>
                 <div
                     class="flex flex-col items-center gap-6 md:flex-row md:items-start md:gap-10">
                     <!-- Profile Picture -->
@@ -2481,14 +2744,16 @@
                     </div>
                     <!-- Bio and Contact -->
                     <div class="w-full flex-1 text-justify">
-                        <h1
-                            class="text-center text-4xl font-bold text-slate-800 sm:text-5xl md:text-right">אורי רשטיק</h1>
+                        <div>
+                            <h1
+                                class="text-center text-4xl font-bold text-slate-800 sm:text-5xl md:text-right">אורי רשטיק</h1>
+                        </div>
                         <p class="mt-4 text-lg text-slate-600 leading-relaxed text-justify max-w-none">
-                            מנהל בכיר (C-Level) המתמחה באסטרטגיה וצמיחה ארגונית, בעל למעלה מ-15 שנות ניסיון בהובלת
-                            , תאגידים במגזר הפרטי והציבורי. מומחה בפיתוח עסקי והתרחבות, רה-ארגון פיננסי, ניהול כספים
-                            מורכב וניווט בסביבות רגולטוריות מורכבות. <strong>רקורד מוכח ויוצא-דופן בהובלת משאים ומתנים
-                                סבוכים</strong> בסכומי עתק, עבודה מול מועצות מנהלים (Board Level), ואופטימיזציה של
-                            הכנסות ותפעול בקנה-מידה נרחב (Scale).
+                            מנהל בכיר המתמחה באסטרטגיה וצמיחה ארגונית על כל רבדיה, בעל למעלה מ-15 שנות ניסיון בהובלת
+                            תאגידים במגזר הפרטי והציבורי. מומחה בפיתוח עסקי והתרחבות, רה-ארגון פיננסי, ניהול כספים
+                            מורכב וניווט בסביבות רגולטוריות מורכבות, ואינטגרציית מערכות. בעל רקורד מוכח בהובלת משאים
+                            ומתנים סבוכים, עבודה מול מועצות מנהלים, אופטימיזציה של הכנסות, תפעול בקנה-מידה נרחב, ידע
+                            עיבוד ושימוש בדאטא, אינטגרציה ומערכות מידע.
                         </p>
 
                         <!-- North Star / Objective -->
@@ -2497,21 +2762,14 @@
                             <p class="text-violet-900 font-medium text-lg leading-relaxed text-justify">
                                 <i data-lucide="target"
                                     class="w-5 h-5 inline-block text-violet-600 mb-1 rtl:ml-1 ltr:mr-1"></i>
-                                <strong>האתגר הבא:</strong> מוכן ומזומן לאתגר הבא כמנכ"ל (CEO) או בתפקיד הנהלה בכירה
-                                (C-Level) בחברה, תאגיד או ארגון. אני שואף למנף את מומחיותי בניהול הבראה וצמיחה
-                                (Turnaround), פתרון חסמים רגולטוריים מורכבים, תוך יישום כלל יכולותיי וניסיוני המגוון
-                                והנרחב ליצירת השפעה וערך מוסף משמעותי.
+                                <strong>האתגר הבא:</strong> מוכן לאתגר הבא בתפקיד הנהלה בכירה בחברה, תאגיד או ארגון.
+                                אני שואף למנף את מומחיותי בניהול הבראה וצמיחה, פתרון חסמים מורכבים, תוך יישום כלל
+                                יכולותיי וניסיוני המגוון והנרחב ליצירת השפעה וערך מוסף משמעותי.
                             </p>
                         </div>
                         <!-- Contact Links -->
                         <div
                             class="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
-                            <!-- English Portfolio Button -->
-                            <a href="https://orireshtik.github.io/orireshtikeng/" target="_blank"
-                                rel="noopener noreferrer"
-                                class="flex items-center gap-2 bg-slate-100 text-slate-800 font-bold px-6 py-3 rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-md">
-                                <i data-lucide="languages" class="w-5 h-5 ms-1"></i> פורטפוליו באנגלית / English
-                            </a>
                             <!-- WhatsApp Button -->
                             <a href="https://wa.me/972528044478" target="_blank" rel="noopener noreferrer"
                                 class="flex items-center gap-3 bg-[#25D366] text-white font-bold px-6 py-3 rounded-full hover:bg-[#128C7E] transition-all hover:scale-105 shadow-lg">
@@ -2521,6 +2779,11 @@
                                         d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.858 7.858 0 0 0 3.888 1.07h.003c4.369 0 7.926-3.559 7.93-7.93a7.856 7.858 0 0 0-2.325-5.638zM7.997 14.511a6.521 6.521 0 0 1-3.333-.918l-.238-.144-2.463.647.66-2.404-.157-.25a6.516 6.521 0 0 1-1.006-3.411c0-3.595 2.926-6.521 6.525-6.521a6.51 6.51 0 0 1 4.612 1.913 6.51 6.51 0 0 1 1.912 4.615c0 3.597-2.926 6.521-6.525 6.521zm3.536-4.891c-.193-.097-1.14-.563-1.317-.627-.178-.063-.306-.097-.433.097-.127.194-.492.627-.603.753-.11.127-.221.141-.413.044-.193-.097-.813-.299-1.549-.956-.572-.511-.958-1.143-1.07-1.336-.112-.194-.012-.299.085-.395.087-.086.194-.224.29-.336.098-.113.13-.193.195-.325.064-.131.033-.247-.015-.344-.048-.097-.433-1.043-.593-1.428-.157-.389-.314-.336-.433-.342-.11-.005-.236-.006-.362-.006-.126 0-.332.047-.505.234-.173.187-.66.645-.66 1.573 0 1.026.54 2.017.618 2.12.079.103 1.063 1.624 2.576 2.274.36.155.64.248.859.317.362.11.692.095.953.05.291-.05 1.14-.464 1.3-.914.161-.45.161-.836.113-.914-.048-.078-.178-.125-.371-.223z" />
                                 </svg>
                                 ווטסאפ
+                            </a>
+                            <a href="https://drive.google.com/uc?export=download&id=1gAb5XWHSZ-iA1mHvCHb8Ausu7Eh3X5jD"
+                                target="_blank" rel="noopener noreferrer" type="text/vcard"
+                                class="flex items-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-emerald-700 transition-all hover:scale-105 shadow-md">
+                                <i data-lucide="contact-round" class="w-5 h-5 ms-1"></i> שמירה באנשי קשר
                             </a>
                             <a href="mailto:orireshtik@gmail.com" target="_blank" rel="noopener noreferrer"
                                 class="flex items-center gap-2 bg-red-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-red-600 transition-all hover:scale-105 shadow-md">
@@ -2597,7 +2860,7 @@
                                 class="min-w-0 flex-1 font-semibold text-sky-800 underline decoration-sky-200 underline-offset-2 hover:text-sky-950">מנכ״ל
                                 שח״ם (2014–2021)</a></li>
                         <li class="flex gap-2"><span class="w-8 shrink-0 font-black text-indigo-600">10.</span><a
-                                href="#shaham-neshama-highlight" data-toc-action="shaham-neshama"
+                                href="#shaham-neshama-trigger" data-modal-trigger="shaham-neshama-trigger"
                                 class="min-w-0 flex-1 font-semibold text-sky-800 underline decoration-sky-200 underline-offset-2 hover:text-sky-950">מקים
                                 עמותת שחקני נשמה</a></li>
                         <li class="flex gap-2"><span class="w-8 shrink-0 font-black text-indigo-600">11.</span><a
@@ -2660,14 +2923,17 @@
                             <span
                                 class="block bg-gradient-to-l from-violet-600 via-indigo-600 to-sky-500 bg-clip-text text-transparent drop-shadow-sm">Professional
                                 Skills Matrix</span>
+                            <span
+                                class="mt-2 block text-lg font-extrabold tracking-tight text-slate-700 sm:text-2xl">מפת
+                                יכולות ניהוליות ועסקיות</span>
                         </h2>
                     </header>
                     <div
                         class="rounded-b-2xl border-t border-slate-200/80 bg-slate-100/90 px-2.5 py-2 sm:px-3 sm:py-2.5 md:px-4">
                         <div id="skills-matrix-bento"
-                            class="mx-auto grid w-full grid-cols-1 gap-2 md:grid-cols-12 md:gap-2.5">
+                            class="mx-auto grid w-full grid-cols-1 gap-2 md:grid-cols-12 md:auto-rows-fr md:gap-2.5">
                             <button type="button" id="skills-matrix-trigger-bd"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-6 rounded-xl bg-gradient-to-br from-cyan-500 to-sky-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-1 md:col-span-4 rounded-xl bg-gradient-to-br from-cyan-500 to-sky-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-300/80">
                                 <div>
                                     <p class="text-xs font-black leading-snug sm:text-sm">צמיחה ופיתוח עסקי (BD)</p>
                                     <p class="mt-0.5 text-[9px] font-bold leading-snug text-white/80 sm:text-[10px]">GTM · פינטק · Fintech · ערוצי הכנסה · Scale</p>
@@ -2675,71 +2941,79 @@
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-strategy"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-6 rounded-xl bg-gradient-to-br from-violet-600 to-purple-700 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-2 md:col-span-4 rounded-xl bg-gradient-to-br from-violet-600 to-purple-700 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-violet-300/80">
                                 <div>
-                                    <p class="text-xs font-black leading-snug sm:text-sm">אסטרטגיה ארגונית ופירוק למהלכים</p>
+                                    <p class="text-xs font-black leading-snug sm:text-sm">אסטרטגיה ארגונית וביצוע טקטי</p>
                                     <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Strategic Planning · Roadmap · תוצאות מדידות</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-business"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-3 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-4 md:col-span-3 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/80">
                                 <div>
                                     <p class="text-xs font-black leading-snug sm:text-sm">אסטרטגיה עסקית והתחרות בשוק</p>
-                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Business Strategy · מודלים רווחיים</p>
+                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Business Strategy · מודלים רווחיים · ביצוע בשטח</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-fintech"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-3 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-800 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-5 md:col-span-3 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-800 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/80">
                                 <div>
-                                    <p class="text-xs font-black leading-snug sm:text-sm">מנועים פיננסיים ואוטומציה</p>
-                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">פינטק · Fintech · DaaS · סליקה</p>
+                                    <p class="text-xs font-black leading-snug sm:text-sm">מנועים פיננסיים, תקציב ואוטומציה</p>
+                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">P&amp;L · תקציב · תזרים · Fintech</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-regulatory"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-3 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-3 md:col-span-4 rounded-xl bg-gradient-to-br from-red-500 to-rose-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300/80">
                                 <div>
-                                    <p class="text-xs font-black leading-snug sm:text-sm">רגולציה, חקיקה וממשק ממשל</p>
-                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">חקיקה · רגולטורים · לובי</p>
+                                    <p class="text-xs font-black leading-snug sm:text-sm">רגולציה, חקיקה, קשרי ממשל וקידום מדיניות</p>
+                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Regulatory Affairs · Policy · Advocacy · לובי · ממשק ממשל</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-systems"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-3 rounded-xl bg-gradient-to-br from-sky-500 to-indigo-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-6 md:col-span-3 rounded-xl bg-gradient-to-br from-sky-500 to-indigo-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300/80">
                                 <div>
                                     <p class="text-xs font-black leading-snug sm:text-sm">אינטגרציית מערכות ודאטה</p>
-                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">CRM · ERP · Data &amp; Ops Stack</p>
+                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">CRM · ERP · פינטק · Fintech · Data &amp; Ops Stack</p>
+                                </div>
+                                <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
+                            </button>
+                            <button type="button" id="skills-matrix-trigger-ops"
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-7 md:col-span-3 rounded-xl bg-gradient-to-br from-slate-600 to-blue-700 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-300/80">
+                                <div>
+                                    <p class="text-xs font-black leading-snug sm:text-sm">תפעול, שירות ו-CX</p>
+                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Customer Ops · SLA · CRM · נהלים</p>
+                                </div>
+                                <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
+                            </button>
+                            <button type="button" id="skills-matrix-trigger-branding"
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-8 md:col-span-6 rounded-xl bg-gradient-to-br from-indigo-600 to-violet-700 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300/80">
+                                <div>
+                                    <p class="text-xs font-black leading-snug sm:text-sm">יכולת הופעה וייצוג</p>
+                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Public Presence · ייצוג · מדיה</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-leadership"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-4 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-9 md:col-span-6 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300/80">
                                 <div>
-                                    <p class="text-xs font-black leading-snug sm:text-sm">מנהיגות בכירה וניהול משאב אנושי</p>
+                                    <p class="text-xs font-black leading-snug sm:text-sm">מנהיגות בכירה, ניהול מנהלים וניהול משאב אנושי</p>
                                     <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Executive Leadership · צוותים · מהלכי שינוי</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-subsidiaries"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-4 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-10 md:col-span-5 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/80">
                                 <div>
                                     <p class="text-xs font-black leading-snug sm:text-sm">מבנה קבוצה וחברות בנות</p>
                                     <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Holdings · חברות בנות · JV · מיזוגים</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
-                            <button type="button" id="skills-matrix-trigger-lobbying"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-4 rounded-xl bg-gradient-to-br from-fuchsia-600 to-purple-800 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-300/80">
-                                <div>
-                                    <p class="text-xs font-black leading-snug sm:text-sm">קידום מדיניות ולובינג</p>
-                                    <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">Policy · Advocacy · קמפיינים</p>
-                                </div>
-                                <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
-                            </button>
                             <button type="button" id="skills-matrix-trigger-turnaround"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-6 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-11 md:col-span-4 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-300/80">
                                 <div>
                                     <p class="text-xs font-black leading-snug sm:text-sm">Turnaround, תרבות ביצוע וצמיחה לאחר משבר</p>
                                     <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">ביצוע · צמיחה לאחר משבר</p>
@@ -2747,9 +3021,9 @@
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
                             </button>
                             <button type="button" id="skills-matrix-trigger-negotiation"
-                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:col-span-6 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-300/80">
+                                class="group relative flex w-full cursor-pointer flex-col gap-1 text-right md:order-12 md:col-span-3 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 px-2.5 py-2 sm:px-3 sm:py-2.5 text-white shadow-md transition hover:-translate-y-px hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-300/80">
                                 <div>
-                                    <p class="text-xs font-black leading-snug sm:text-sm">משא ומתן אסטרטגי בסיכון גבוה</p>
+                                    <p class="text-xs font-black leading-snug sm:text-sm">משא ומתן מורכב</p>
                                     <p class="mt-0.5 text-[9px] font-bold text-white/80 sm:text-[10px]">מסגרות · בינלאומי · עסקאות</p>
                                 </div>
                                 <span class="mt-0.5 text-xs font-black tracking-wide text-white/90 sm:text-sm">לחיצה לפרטים</span>
@@ -2821,8 +3095,8 @@
             </div>
         </section>
 
-        <section id="eshkolot" class="mb-16">
-            <div class="flex flex-col items-center mb-12">
+        <section id="eshkolot" class="mb-10">
+            <div class="flex flex-col items-center mb-4 sm:mb-6">
                 <!-- PERIOD BANNER - DRAMATIC -->
                 <div class="w-full mb-8 rounded-3xl overflow-hidden shadow-xl">
                     <div
@@ -2872,7 +3146,7 @@
                 </div>
 
                 <!-- Management Scope Badge -->
-                <div class="flex flex-wrap justify-center gap-3 mb-6 relative max-w-full px-1">
+                <div class="flex flex-wrap justify-center gap-3 mb-2 relative max-w-full px-1">
                     <span
                         class="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm flex items-center gap-1.5 cursor-default max-w-full min-w-0 break-words text-center justify-center"><i
                             data-lucide="coins" class="w-3.5 h-3.5 text-sky-500 shrink-0"></i> מחזור הכנסות (Revenue): 63M+ ש"ח
@@ -2922,7 +3196,7 @@
             </div>
 
             <!-- Charts -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12" id="eshkolot-charts">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6" id="eshkolot-charts">
                 <div
                     class="chart-card bg-white p-5 md:p-6 rounded-2xl shadow-lg border border-slate-50 overflow-hidden">
                     <div class="chart-container relative"><canvas id="eshkolotRevenueChart"></canvas></div>
@@ -2934,19 +3208,19 @@
             </div>
 
             <!-- Achievements Grid -->
-            <div class="text-center mt-16 mb-12">
+            <div class="text-center mt-8 mb-8">
                 <div class="mx-auto max-w-4xl px-3">
                     <h3
                         class="text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-[2.45rem] md:leading-[1.2]">
                         ביצועים עסקיים ואסטרטגיים מרכזיים</h3>
-                    <div class="mx-auto mt-5 flex justify-center sm:mt-6" aria-hidden="true">
+                    <div class="mx-auto mt-4 flex justify-center sm:mt-5" aria-hidden="true">
                         <div
                             class="h-1.5 w-36 rounded-full bg-gradient-to-r from-sky-400 via-indigo-500 to-violet-600 shadow-md shadow-sky-200/50 sm:h-2 sm:w-44">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-6 sm:mb-8">
 
                 <!-- Revenue Strategy -->
                 <button id="eshkolot-revenue-trigger"
@@ -3071,7 +3345,7 @@
             </div>
 
             <!-- Key Projects Section -->
-            <div id="eshkolot-core-projects" class="scroll-mt-24 text-center mt-16 mb-10">
+            <div id="eshkolot-core-projects" class="scroll-mt-24 text-center mt-6 mb-8">
                 <div class="mx-auto max-w-4xl px-3">
                     <h3
                         class="text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-[2.45rem] md:leading-[1.2]">
@@ -3086,7 +3360,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 gap-10 mb-12">
+            <div class="grid grid-cols-1 gap-6 mb-8">
                 <!-- Project 1: Digital Transformation -->
                 <div id="project-eshkolot-digital"
                     class="scroll-mt-24 bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
@@ -3243,13 +3517,13 @@
                                 class="h-5 w-5 shrink-0 text-slate-500 transition-transform duration-200 group-open:rotate-180"
                                 aria-hidden="true"></i>
                         </summary>
-                        <div class="px-4 sm:px-6 md:px-8 pb-8 md:pb-12 pt-2 border-t border-slate-100 bg-white">
+                        <div class="px-4 sm:px-6 md:px-8 pb-3 md:pb-4 pt-2 border-t border-slate-100 bg-white">
                     <p class="text-slate-600 text-lg leading-relaxed text-justify mb-8 max-w-4xl">
                         הובלת יוזמה אסטרטגית לאיתור, שחרור וחלוקה של מיליוני שקלים בנכסים פיננסיים קפואים שהוחזקו
                         בנאמנות משנת 1996. צליחת חסמים רגולטוריים היסטוריים לטובת הזרמת הון רדום לאלפי מוטבים.
                     </p>
 
-                    <div class="mb-12 relative p-4 sm:p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 overflow-hidden">
+                    <div class="mb-6 relative p-4 sm:p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 overflow-hidden">
                         <p class="text-xs font-bold text-slate-400 uppercase mb-6 sm:mb-10 tracking-widest text-center">תהליך
                             איתור וחלוקת הכספים</p>
 
@@ -3346,8 +3620,12 @@
                     class="bg-white px-6 pt-6 pb-5 md:px-10 md:pt-10 md:pb-7 rounded-3xl shadow-xl border-2 border-violet-100 scroll-mt-24">
                     <div class="flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-start mb-8">
                         <div class="flex items-center gap-4 sm:gap-5 min-w-0 flex-1">
-                            <div class="p-4 sm:p-5 bg-violet-600 text-white rounded-[1.5rem] shadow-xl shadow-violet-200 shrink-0"><i
-                                    data-lucide="rocket" class="w-8 h-8"></i></div>
+                            <div
+                                class="flex h-20 w-32 shrink-0 items-center justify-center overflow-hidden rounded-[1.5rem] bg-white p-2 shadow-xl shadow-violet-200 ring-1 ring-violet-100 sm:h-24 sm:w-40">
+                                <img src="https://eshkolot.co.il/wp-content/uploads/2024/06/EILAM-BIG-1536x604.jpg"
+                                    alt="לוגו אשל&quot;מ" class="h-full w-full object-contain" loading="lazy"
+                                    decoding="async">
+                            </div>
                             <div class="min-w-0">
                                 <h4 class="text-2xl sm:text-3xl font-bold text-slate-800 leading-tight break-words">תפנית אסטרטגית (Pivot):
                                     שותפות "אשל"מ"</h4>
@@ -3490,14 +3768,17 @@
                 <div class="mb-6 lg:mb-8">
                     <div class="flex flex-col items-center gap-4 text-center lg:flex-row lg:items-center lg:justify-center lg:gap-8 lg:text-start" dir="ltr">
                         <div
-                            class="flex shrink-0 flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-3xl border border-slate-200/80 bg-gradient-to-l from-slate-50 to-white px-6 py-4 shadow-md ring-1 ring-slate-100/80 sm:gap-x-5 sm:px-8 sm:py-5 md:gap-x-6 md:px-10 md:py-6"
+                            class="flex shrink-0 flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-3xl border border-slate-200/80 bg-gradient-to-l from-slate-50 to-white px-6 py-2.5 shadow-md ring-1 ring-slate-100/80 sm:gap-x-5 sm:px-8 sm:py-3 md:gap-x-6 md:px-10 md:py-3.5"
                             dir="rtl">
                             <span
                                 class="text-lg font-extrabold tracking-wide text-slate-800 sm:text-xl md:text-2xl lg:text-3xl">פודקאסט ב־</span>
-                            <img src="https://osimhistoria.com/wp-content/uploads/2026/05/logos-and-covers-osim-historia-38.png"
-                                alt="ynet" width="160" height="48"
-                                class="h-11 w-auto object-contain object-center sm:h-14 md:h-16 lg:h-[4.75rem] lg:max-h-none"
-                                loading="lazy" decoding="async" />
+                            <span
+                                class="flex h-11 w-20 items-center justify-center overflow-hidden sm:h-14 sm:w-24 md:h-16 md:w-28 lg:h-[4.5rem] lg:w-32">
+                                <img src="https://osimhistoria.com/wp-content/uploads/2026/05/logos-and-covers-osim-historia-38.png"
+                                    alt="ynet" width="160" height="48"
+                                    class="h-full w-full scale-[1.75] object-contain object-center"
+                                    loading="lazy" decoding="async" />
+                            </span>
                         </div>
                         <p
                             class="mx-auto max-w-3xl text-pretty text-base font-semibold leading-snug text-slate-800 sm:text-lg md:text-xl md:leading-snug lg:mx-0 lg:max-w-none lg:flex-1 lg:text-right"
@@ -3565,7 +3846,7 @@
         </section>
 
         <!-- Dramatic era transition -->
-        <div class="relative my-16 flex items-center justify-center">
+        <div class="relative my-8 flex items-center justify-center">
             <div class="absolute inset-0 flex items-center">
                 <div class="w-full h-px bg-gradient-to-r from-sky-200 via-slate-300 to-violet-200"></div>
             </div>
@@ -3579,7 +3860,7 @@
         </div>
 
         <!-- PERIOD BANNER - merged with logo row -->
-        <div id="role-shaham-ceo" class="scroll-mt-24 w-full mb-8 rounded-3xl overflow-hidden shadow-xl">
+        <div id="role-shaham-ceo" class="scroll-mt-24 w-full mb-4 rounded-3xl overflow-hidden shadow-xl">
             <div
                 class="bg-gradient-to-l from-violet-700 via-violet-600 to-purple-500 px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-6">
                 <!-- Left: Logo + Title -->
@@ -3619,29 +3900,12 @@
         </div>
 
         <!-- Management Scope Badge (SHAHAM) -->
-        <div class="flex flex-wrap justify-center gap-3 mb-6 relative">
+        <div class="flex flex-wrap justify-center gap-3 mb-0 relative">
 
-            <!-- Subsidiaries Dropdown Wrapper for SHAHAM -->
-            <div id="shaham-neshama-highlight" class="relative group scroll-mt-28">
-                <button id="shaham-subsidiaries-trigger"
-                    class="bg-violet-50 border border-violet-200 text-violet-700 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm flex items-center gap-1.5 hover:bg-violet-100 transition-colors focus:outline-none cursor-pointer group-hover:ring-2 group-hover:ring-violet-100">
-                    <i data-lucide="blocks" class="w-3.5 h-3.5"></i> ארגון בת 1 <i data-lucide="chevron-down"
-                        class="w-3 h-3 ml-1 transition-transform" id="shaham-subsidiaries-icon"></i>
-                </button>
-                <!-- Dropdown -->
-                <div id="shaham-subsidiaries-dropdown"
-                    class="hidden absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-xl shadow-xl border border-slate-100 z-50 overflow-hidden text-left"
-                    dir="ltr">
-                    <button id="shaham-neshama-trigger"
-                        class="scroll-mt-28 w-full px-4 py-3 hover:bg-rose-50 transition-colors flex items-start gap-3 focus:outline-none text-left cursor-pointer border-none bg-transparent m-0">
-                        <i data-lucide="heart" class="w-4 h-4 text-rose-500 mt-0.5 flex-shrink-0"></i>
-                        <div class="text-right w-full" dir="rtl">
-                            <p class="text-xs font-bold text-slate-800">שחקני נשמה</p>
-                            <p class="text-[10px] text-slate-500 mt-0.5">עמותה פילנתרופית לאמנים</p>
-                        </div>
-                    </button>
-                </div>
-            </div>
+            <button id="shaham-neshama-trigger"
+                class="scroll-mt-28 bg-violet-50 border border-violet-200 text-violet-700 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm flex items-center gap-1.5 hover:bg-violet-100 transition-colors focus:outline-none cursor-pointer hover:ring-2 hover:ring-violet-100">
+                <i data-lucide="heart-handshake" class="w-3.5 h-3.5"></i> יסוד עמותת שחקני נשמה
+            </button>
 
             <span
                 class="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm flex items-center gap-1.5 cursor-default"><i
@@ -3649,11 +3913,15 @@
             <span
                 class="bg-white border border-slate-200 text-slate-600 px-3 py-1.5 rounded-full text-xs font-semibold shadow-sm flex items-center gap-1.5 cursor-default"><i
                     data-lucide="network" class="w-3.5 h-3.5 text-violet-500"></i> 100+ ספקים ומדריכים חיצוניים</span>
+            <button id="lahav-trigger"
+                class="bg-white border border-violet-200 text-violet-700 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm flex items-center gap-1.5 hover:bg-violet-50 transition-colors focus:outline-none cursor-pointer hover:ring-2 hover:ring-violet-100">
+                <i data-lucide="briefcase-business" class="w-3.5 h-3.5"></i> חבר הנהלת להב
+            </button>
         </div>
 
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+    <div id="shaham-charts" class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6 scroll-mt-24">
         <div class="chart-card bg-white p-5 md:p-6 rounded-2xl shadow-lg border border-slate-50 overflow-hidden">
             <div class="chart-container relative">
                 <canvas id="shahamRevenueChart"></canvas>
@@ -3665,19 +3933,19 @@
         </div>
     </div>
 
-    <div id="shaham-achievements" class="scroll-mt-24 text-center mt-16 mb-12">
+    <div id="shaham-achievements" class="scroll-mt-24 text-center mt-8 mb-8">
         <div class="mx-auto max-w-4xl px-3">
             <h3
                 class="text-balance text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-[2.45rem] md:leading-[1.2]">
                 הישגים אסטרטגיים בשח"ם</h3>
-            <div class="mx-auto mt-5 flex justify-center sm:mt-6" aria-hidden="true">
+            <div class="mx-auto mt-4 flex justify-center sm:mt-5" aria-hidden="true">
                 <div
                     class="h-1.5 w-36 rounded-full bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-600 shadow-md shadow-violet-200/60 sm:h-2 sm:w-44">
                 </div>
             </div>
         </div>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
         <button id="shaham-growth-trigger"
             class="achievement-card cursor-pointer bg-white p-6 rounded-2xl shadow-lg border-t-4 border-violet-500 border border-slate-100 flex flex-col h-full group hover:shadow-2xl hover:border-violet-300 hover:ring-4 hover:ring-violet-50 transition-all text-justify focus:outline-none w-full relative">
             <div
@@ -3703,8 +3971,8 @@
                 <i data-lucide="handshake" class="w-8 h-8"></i>
             </div>
             <h4 class="text-xl font-bold text-slate-800 mb-2">גיוון אפיקים והסכמים אסטרטגיים</h4>
-            <p class="text-slate-600 font-light text-sm mb-6">הרחבת הפעילות לתיאטרון רפרטוארי, דיבוב ופרינג', לצד הבטחת
-                הסכמי התקשרות אסטרטגיים.</p>
+            <p class="text-slate-600 font-light text-sm mb-6">הרחבת הפעילות לצד הבטחת הסכמי התקשרות אסטרטגיים במגוון
+                ענפים.</p>
             <div
                 class="mt-auto pt-4 border-t border-slate-100 group-hover:border-violet-100 transition-colors flex items-center justify-between w-full text-violet-600">
                 <span class="text-xs font-bold uppercase tracking-wider">צפייה בפורטפוליו</span>
@@ -3775,8 +4043,9 @@
         <a id="shaham-market-leader-card" href="https://www.youtube.com/watch?v=9FQuylS6b5I" target="_blank" rel="noopener noreferrer"
             class="achievement-card scroll-mt-28 cursor-pointer bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group hover:shadow-2xl hover:border-rose-300 hover:ring-4 hover:ring-rose-50 transition-all text-justify focus:outline-none w-full relative overflow-hidden">
             <div
-                class="w-16 h-16 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform relative z-10">
-                <i data-lucide="trophy" class="w-8 h-8"></i>
+                class="w-20 h-16 overflow-hidden bg-white rounded-xl flex items-center justify-center mb-6 shadow-inner ring-1 ring-rose-100 group-hover:scale-110 transition-transform relative z-10">
+                <img src="https://www.shaham.org.il/prdPics/events/10856_509562_eve_image.png"
+                    alt="פרסי שח״ם" class="h-full w-full object-contain p-1.5">
             </div>
             <h4 class="text-xl font-bold text-slate-800 mb-2 relative z-10">מיצוב כמובילי שוק</h4>
             <p class="text-slate-600 font-light text-sm mb-6 relative z-10">ביסוס פרסי שח"ם כאירוע הדגל של התעשייה.</p>
@@ -3809,7 +4078,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 gap-10 mb-12">
+    <div class="grid grid-cols-1 gap-6 mb-12">
 
         <!-- Project 1: Social Safety Net -->
         <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
@@ -3897,7 +4166,7 @@
 
         <!-- Project 2: P&L Unit (Moved from Modal) -->
         <div id="shaham-pnl-training"
-            class="scroll-mt-24 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-slate-100 hover:border-violet-200 transition-all mt-16">
+            class="scroll-mt-24 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-slate-100 hover:border-violet-200 transition-all">
             <div class="flex justify-between items-start mb-8">
                 <div class="p-4 bg-violet-50 text-violet-600 rounded-2xl shadow-sm"><i data-lucide="briefcase"
                         class="w-8 h-8"></i></div>
@@ -3927,7 +4196,7 @@
                 והפסד (P&L) עצמאית. מהלך זה חולל מהפכה בשוק ההכשרות המקצועיות לשחקנים.
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 <div
                     class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex flex-col items-center text-center relative overflow-hidden">
                     <div
@@ -3980,11 +4249,11 @@
     </div>
 
     <!-- BOARD EXPERIENCE -->
-    <section id="additional-roles" class="mb-16 scroll-mt-24">
-        <div class="mt-16 mb-10 w-full">
+    <section id="additional-roles" class="mb-8 scroll-mt-24">
+        <div class="mt-3 mb-5 w-full">
             <div class="rounded-3xl overflow-hidden shadow-xl">
                 <div
-                    class="bg-gradient-to-l from-blue-800 via-indigo-700 to-slate-900 px-6 py-6 sm:px-8 sm:py-7 md:px-10 md:py-8">
+                    class="bg-gradient-to-l from-blue-800 via-indigo-700 to-slate-900 px-6 py-5 sm:px-8 sm:py-6 md:px-10 md:py-6">
                     <div class="text-center sm:text-right" dir="rtl">
                         <h2 class="text-balance text-2xl font-black tracking-tight text-white sm:text-3xl md:text-4xl">
                             תפקידי מפתח וניסיון כדירקטור</h2>
@@ -4247,11 +4516,11 @@
 
 
     <!-- Education & professional credentials (before testimonials) -->
-    <section id="education" class="mb-16 scroll-mt-24">
+    <section id="education" class="mb-5 scroll-mt-24">
         <div
             class="rounded-3xl border border-violet-200/70 bg-white shadow-xl overflow-hidden ring-1 ring-violet-100/80">
             <div
-                class="bg-gradient-to-l from-violet-700 via-indigo-700 to-slate-900 px-6 py-6 sm:px-8 sm:py-7 text-justify">
+                class="bg-gradient-to-l from-violet-700 via-indigo-700 to-slate-900 px-6 py-5 sm:px-8 sm:py-6 text-justify">
                 <h2 class="text-2xl sm:text-4xl font-bold text-white tracking-tight drop-shadow-sm">השכלה והכשרות
                     מקצועיות</h2>
                 <p class="mt-2 text-sm sm:text-base text-violet-100/95 max-w-3xl leading-relaxed text-justify">תארים, רישיון והכשרות
@@ -4350,8 +4619,8 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section id="testimonials" class="mb-16">
-        <div class="mx-auto mb-10 max-w-4xl text-center">
+    <section id="testimonials" class="mb-8">
+        <div class="mx-auto mb-8 max-w-4xl text-center">
             <h2
                 class="inline-flex max-w-full flex-wrap items-center justify-center gap-x-2.5 gap-y-2 text-balance text-2xl font-bold tracking-tight text-slate-900 sm:gap-x-3 sm:text-3xl md:text-4xl lg:text-[2.85rem] lg:leading-tight">
                 <i data-lucide="message-square-quote"
@@ -4489,23 +4758,23 @@
         </div>
     </section>
 
-    <footer id="contact" class="scroll-mt-24 w-full mt-14 border-t border-slate-200/90 bg-white">
+    <footer id="contact" class="scroll-mt-24 w-full mt-6 border-t border-slate-200/90 bg-white">
         <div class="max-w-lg mx-auto px-4 py-7 text-center">
             <p class="text-base sm:text-lg font-semibold text-slate-600 tracking-wide mb-4">צור קשר</p>
             <div
                 class="inline-flex flex-wrap items-center justify-center gap-1 rounded-full border border-slate-200/90 bg-slate-50/80 px-2 py-2">
                 <a href="tel:+972528044478"
-                    class="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-white hover:text-slate-900 hover:shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-0.5 hover:text-slate-900 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
                     title="טלפון" aria-label="טלפון">
                     <i data-lucide="phone" class="w-[18px] h-[18px]"></i>
                 </a>
                 <a href="mailto:orireshtik@gmail.com" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-white hover:text-slate-900 hover:shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-0.5 hover:text-red-500 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
                     title='דוא"ל' aria-label='דוא"ל'>
                     <i data-lucide="mail" class="w-[18px] h-[18px]"></i>
                 </a>
                 <a href="https://wa.me/972528044478" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sm ring-1 ring-black/5 hover:bg-[#20bd5a] hover:shadow-md transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50"
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-0.5 hover:text-[#25D366] hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366]/50"
                     title="ווטסאפ" aria-label="ווטסאפ">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-[19px] w-[19px] shrink-0" viewBox="0 0 24 24"
                         fill="currentColor" aria-hidden="true">
@@ -4513,8 +4782,18 @@
                             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                     </svg>
                 </a>
+                <a href="https://drive.google.com/uc?export=download&id=1gAb5XWHSZ-iA1mHvCHb8Ausu7Eh3X5jD"
+                    target="_blank" rel="noopener noreferrer" type="text/vcard"
+                    class="group relative inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-0.5 hover:text-emerald-600 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
+                    title="פתיחת כרטיס ביקור" aria-label="פתיחת כרטיס ביקור">
+                    <i data-lucide="contact-round" class="w-[18px] h-[18px]"></i>
+                    <span
+                        class="pointer-events-none absolute bottom-full left-1/2 mb-2 w-max max-w-40 -translate-x-1/2 rounded-xl bg-slate-900 px-3 py-1.5 text-xs font-bold leading-tight text-white opacity-0 shadow-lg transition-all group-hover:opacity-100 group-focus-visible:opacity-100">
+                        פתיחת כרטיס ביקור
+                    </span>
+                </a>
                 <a href="https://www.linkedin.com/in/ori-reshtik/" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex h-9 w-9 items-center justify-center rounded-full text-slate-500 hover:bg-white hover:text-[#0A66C2] hover:shadow-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
+                    class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-0.5 hover:text-[#0A66C2] hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300"
                     title="LinkedIn" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-[18px] h-[18px]" fill="currentColor"
                         aria-hidden="true">
@@ -4530,9 +4809,10 @@
     </div>
 
     <a href="#portfolio-toc" id="portfolio-toc-float-btn"
-        class="fixed left-4 top-[36%] z-[2400] flex h-12 w-12 items-center justify-center rounded-full border border-slate-200/90 bg-white/95 text-slate-600 shadow-md backdrop-blur-sm transition hover:border-indigo-400 hover:bg-indigo-600 hover:text-white hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 sm:h-14 sm:w-14"
-        title="תוכן עניינים - ניווט מהיר בפורטפוליו" aria-label="תוכן עניינים - ניווט מהיר בפורטפוליו">
-        <i data-lucide="list-ordered" class="h-7 w-7 sm:h-8 sm:w-8" aria-hidden="true"></i>
+        class="fixed left-3 top-[36%] z-[2400] flex items-center gap-2 rounded-2xl border border-indigo-200/90 bg-white/95 px-3 py-2 text-xs font-black leading-tight text-indigo-800 shadow-md backdrop-blur-sm transition hover:border-indigo-400 hover:bg-indigo-600 hover:text-white hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 sm:left-4 sm:px-3.5 sm:py-2.5 sm:text-sm"
+        title="תוכן עניינים ומפת יכולות" aria-label="תוכן עניינים ומפת יכולות">
+        <i data-lucide="list-ordered" class="h-6 w-6 shrink-0 sm:h-7 sm:w-7" aria-hidden="true"></i>
+        <span class="max-w-24 text-right">תוכן עניינים ומפת יכולות</span>
     </a>
 
     <script>
@@ -4606,6 +4886,7 @@
             new GenericModal('che-modal', 'che-info-trigger', ['che-close-x', 'che-close-btn']);
             new GenericModal('givatayim-modal', 'givatayim-info-trigger', ['givatayim-close-x', 'givatayim-close-btn']);
             new GenericModal('keren-eshkolot-modal', 'keren-modal-trigger', ['keren-eshkolot-close-x', 'keren-eshkolot-close-btn']);
+            new GenericModal('lahav-modal', 'lahav-trigger', ['lahav-close-x', 'lahav-close-btn']);
             new GenericModal('shaham-neshama-modal', 'shaham-neshama-trigger', ['shaham-neshama-close-x', 'shaham-neshama-close-btn']);
             new GenericModal('skills-matrix-modal-bd', 'skills-matrix-trigger-bd', ['skills-matrix-bd-close-x', 'skills-matrix-bd-close-btn']);
             new GenericModal('skills-matrix-modal-strategy', 'skills-matrix-trigger-strategy', ['skills-matrix-strategy-close-x', 'skills-matrix-strategy-close-btn']);
@@ -4615,9 +4896,66 @@
             new GenericModal('skills-matrix-modal-fintech', 'skills-matrix-trigger-fintech', ['skills-matrix-fintech-close-x', 'skills-matrix-fintech-close-btn']);
             new GenericModal('skills-matrix-modal-regulatory', 'skills-matrix-trigger-regulatory', ['skills-matrix-regulatory-close-x', 'skills-matrix-regulatory-close-btn']);
             new GenericModal('skills-matrix-modal-systems', 'skills-matrix-trigger-systems', ['skills-matrix-systems-close-x', 'skills-matrix-systems-close-btn']);
+            new GenericModal('skills-matrix-modal-ops', 'skills-matrix-trigger-ops', ['skills-matrix-ops-close-x', 'skills-matrix-ops-close-btn']);
+            new GenericModal('skills-matrix-modal-branding', 'skills-matrix-trigger-branding', ['skills-matrix-branding-close-x', 'skills-matrix-branding-close-btn']);
             new GenericModal('skills-matrix-modal-turnaround', 'skills-matrix-trigger-turnaround', ['skills-matrix-turnaround-close-x', 'skills-matrix-turnaround-close-btn']);
             new GenericModal('skills-matrix-modal-negotiation', 'skills-matrix-trigger-negotiation', ['skills-matrix-negotiation-close-x', 'skills-matrix-negotiation-close-btn']);
-            new GenericModal('skills-matrix-modal-lobbying', 'skills-matrix-trigger-lobbying', ['skills-matrix-lobbying-close-x', 'skills-matrix-lobbying-close-btn']);
+
+            const firstVisitModal = document.getElementById('first-visit-modal');
+            const firstVisitCloseX = document.getElementById('first-visit-close-button');
+            const firstVisitFullBtn = document.getElementById('first-visit-full-btn');
+            const firstVisitSkillsBtn = document.getElementById('first-visit-skills-btn');
+            const firstVisitContactBtn = document.getElementById('first-visit-contact-btn');
+            const closeFirstVisitModal = () => {
+                if (!firstVisitModal) return;
+                firstVisitModal.classList.remove('modal-active');
+                setTimeout(() => {
+                    firstVisitModal.classList.remove('flex');
+                    firstVisitModal.classList.add('hidden');
+                }, 300);
+            };
+
+            const openFirstVisitModal = () => {
+                if (!firstVisitModal) return;
+                firstVisitModal.classList.remove('hidden');
+                firstVisitModal.classList.add('flex');
+                setTimeout(() => firstVisitModal.classList.add('modal-active'), 10);
+            };
+
+            const closeAndScrollFromFirstVisit = (targetId) => {
+                closeFirstVisitModal();
+                const target = document.getElementById(targetId);
+                if (target) {
+                    setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 160);
+                }
+            };
+
+            if (firstVisitModal) setTimeout(openFirstVisitModal, 450);
+
+            firstVisitCloseX?.addEventListener('click', () => {
+                closeFirstVisitModal();
+            });
+            firstVisitFullBtn?.addEventListener('click', () => {
+                closeFirstVisitModal();
+            });
+            firstVisitSkillsBtn?.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeAndScrollFromFirstVisit('skills-map');
+            });
+            firstVisitContactBtn?.addEventListener('click', (e) => {
+                e.preventDefault();
+                closeAndScrollFromFirstVisit('contact');
+            });
+            firstVisitModal?.addEventListener('click', (e) => {
+                if (e.target === firstVisitModal) {
+                    closeFirstVisitModal();
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && firstVisitModal && !firstVisitModal.classList.contains('hidden')) {
+                    closeFirstVisitModal();
+                }
+            });
 
             const tocNav = document.getElementById('portfolio-toc');
             if (tocNav) {
@@ -4665,15 +5003,6 @@
                                 if (keren) keren.click();
                             }, 280);
                         }
-                        if (tocAction === 'shaham-neshama') {
-                            const shahamDd = document.getElementById('shaham-subsidiaries-dropdown');
-                            const shahamBtn = document.getElementById('shaham-subsidiaries-trigger');
-                            if (shahamDd && shahamDd.classList.contains('hidden') && shahamBtn) shahamBtn.click();
-                            window.setTimeout(() => {
-                                const neshama = document.getElementById('shaham-neshama-trigger');
-                                if (neshama) neshama.click();
-                            }, 280);
-                        }
                         if (tocAction === 'cv-dropdown-open') {
                             const dd = document.getElementById('cv-dropdown');
                             const cvBtn = document.getElementById('cv-download-btn');
@@ -4717,27 +5046,58 @@
             document.addEventListener('click', (e) => {
                 const body = e.target.closest('.skills-matrix-modal-body');
                 if (!body) return;
-                const projectDetailIds = new Set(['project-eshkolot-digital', 'project-eshkolot-financial', 'eshlam-project']);
-                const aModal = e.target.closest('a[data-modal-trigger]');
-                if (aModal && body.contains(aModal)) {
+                const projectDetailIds = new Set(['project-eshkolot-digital', 'project-eshkolot-financial', 'eshlam-project', 'shaham-pnl-training', 'shaham-safety-net']);
+                const link = e.target.closest('a[href^="#"], a[data-modal-trigger]');
+                if (!link || !body.contains(link)) return;
+                if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+
+                const closeCurrentSkillsModal = (afterClose) => {
+                    const shell = body.closest('.skills-matrix-modal-shell');
+                    if (!shell) {
+                        afterClose();
+                        return;
+                    }
+                    shell.classList.remove('modal-active');
+                    window.setTimeout(() => {
+                        shell.classList.remove('flex');
+                        shell.classList.add('hidden');
+                        afterClose();
+                    }, 300);
+                };
+
+                const openProjectDetails = (target) => {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    const det = target.querySelector('details') ||
+                        (target.id === 'shaham-safety-net' ? target.nextElementSibling?.querySelector('details') : null);
+                    if (det) det.open = true;
+                };
+
+                const modalTriggerId = link.getAttribute('data-modal-trigger');
+                const href = link.getAttribute('href') || '';
+                const hashId = href.startsWith('#') ? href.slice(1) : '';
+                const hashTarget = hashId ? document.getElementById(hashId) : null;
+
+                if (modalTriggerId) {
                     e.preventDefault();
-                    const tid = aModal.getAttribute('data-modal-trigger');
-                    const trigger = tid && document.getElementById(tid);
-                    if (trigger) trigger.click();
+                    closeCurrentSkillsModal(() => {
+                        if (hashTarget) hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        window.setTimeout(() => {
+                            const trigger = document.getElementById(modalTriggerId);
+                            if (trigger) trigger.click();
+                        }, hashTarget ? 180 : 0);
+                    });
                     return;
                 }
-                const aProj = e.target.closest('a[href^="#"]');
-                if (!aProj || !body.contains(aProj)) return;
-                const href = aProj.getAttribute('href') || '';
-                if (!href.startsWith('#')) return;
-                const pid = href.slice(1);
-                if (!projectDetailIds.has(pid)) return;
+
+                if (!hashTarget) return;
                 e.preventDefault();
-                const block = document.getElementById(pid);
-                if (!block) return;
-                block.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                const det = block.querySelector('details');
-                if (det) det.open = true;
+                closeCurrentSkillsModal(() => {
+                    if (projectDetailIds.has(hashId)) {
+                        openProjectDetails(hashTarget);
+                        return;
+                    }
+                    hashTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
             });
 
             // Dropdown Logic for Subsidiaries (Eshkolot)
@@ -4756,26 +5116,6 @@
                     if (!subsTrigger.contains(e.target) && !subsDropdown.contains(e.target)) {
                         subsDropdown.classList.add('hidden');
                         subsIcon.classList.remove('rotate-180');
-                    }
-                });
-            }
-
-            // Dropdown Logic for Subsidiaries (SHAHAM)
-            const shahamSubsTrigger = document.getElementById('shaham-subsidiaries-trigger');
-            const shahamSubsDropdown = document.getElementById('shaham-subsidiaries-dropdown');
-            const shahamSubsIcon = document.getElementById('shaham-subsidiaries-icon');
-            if (shahamSubsTrigger && shahamSubsDropdown && shahamSubsIcon) {
-                shahamSubsTrigger.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    shahamSubsDropdown.classList.toggle('hidden');
-                    shahamSubsIcon.classList.toggle('rotate-180');
-                });
-
-                // Close dropdown when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!shahamSubsTrigger.contains(e.target) && !shahamSubsDropdown.contains(e.target)) {
-                        shahamSubsDropdown.classList.add('hidden');
-                        shahamSubsIcon.classList.remove('rotate-180');
                     }
                 });
             }
