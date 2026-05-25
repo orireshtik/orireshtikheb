@@ -5,12 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אורי רשטיק - פורטפוליו מנהלים</title>
+    <meta name="description"
+        content="מנהל בכיר המתמחה באסטרטגיה וצמיחה ארגונית, בעל למעלה מ-15 שנות ניסיון בהובלת תאגידים במגזר הפרטי והציבורי. מומחה בפיתוח עסקי, רה-ארגון פיננסי, ניהול כספים מורכב ורגולציה.">
+    <meta name="author" content="אורי רשטיק">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://orireshtik.github.io/orireshtikheb/">
+    <link rel="icon" href="https://orireshtik.github.io/orireshtikheb/og-image.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://orireshtik.github.io/orireshtikheb/og-image.jpg">
+    <!-- Open Graph: Facebook, WhatsApp, LinkedIn, Telegram, Slack, Discord, iMessage -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="he_IL">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="https://orireshtik.github.io/orireshtikheb/">
+    <meta property="og:site_name" content="אורי רשטיק - פורטפוליו מנהלים">
+    <meta property="og:title" content="אורי רשטיק - פורטפוליו מנהלים">
+    <meta property="og:description"
+        content="מנהל בכיר המתמחה באסטרטגיה וצמיחה ארגונית על כל רבדיה, בעל למעלה מ-15 שנות ניסיון בהובלת תאגידים במגזר הפרטי והציבורי. מומחה בפיתוח עסקי והתרחבות, רה-ארגון פיננסי, ניהול כספים מורכב וניווט בסביבות רגולטוריות מורכבות.">
+    <meta property="og:image" content="https://orireshtik.github.io/orireshtikheb/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://orireshtik.github.io/orireshtikheb/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="אורי רשטיק — תמונת פרופיל">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="אורי רשטיק - פורטפוליו מנהלים">
+    <meta name="twitter:description"
+        content="מנהל בכיר המתמחה באסטרטגיה וצמיחה ארגונית, בעל למעלה מ-15 שנות ניסיון בהובלת תאגידים במגזר הפרטי והציבורי.">
+    <meta name="twitter:image" content="https://orireshtik.github.io/orireshtikheb/og-image.jpg">
+    <meta name="twitter:image:alt" content="אורי רשטיק — תמונת פרופיל">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "אורי רשטיק",
+        "url": "https://orireshtik.github.io/orireshtikheb/",
+        "image": "https://orireshtik.github.io/orireshtikheb/og-image.jpg",
+        "description": "מנהל בכיר המתמחה באסטרטגיה וצמיחה ארגונית, בעל למעלה מ-15 שנות ניסיון בהובלת תאגידים במגזר הפרטי והציבורי.",
+        "jobTitle": "מנהל בכיר",
+        "sameAs": [
+            "https://www.linkedin.com/in/ori-reshtik/"
+        ]
+    }
+    </script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -144,6 +187,16 @@
             stroke-width: 3 !important;
         }
 
+        .media-video-card-play {
+            opacity: 0.92;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .media-video-card:hover .media-video-card-play {
+            opacity: 1;
+            transform: scale(1.06);
+        }
+
         .skills-matrix-modal-shell .modal-content>div:first-child::after {
             content: "✦ דוגמאות נבחרות";
             display: inline-flex;
@@ -164,10 +217,10 @@
     </style>
 </head>
 
-<body class="gradient-bg text-slate-900 overflow-x-hidden text-justify">
+<body class="gradient-bg text-slate-900 overflow-x-hidden overflow-y-hidden text-justify">
 
     <div id="first-visit-modal"
-        class="custom-modal fixed inset-0 z-[3000] hidden items-start sm:items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-sm overflow-y-auto">
+        class="custom-modal modal-active fixed inset-0 z-[3000] flex items-start sm:items-center justify-center p-3 sm:p-4 bg-slate-950/70 backdrop-blur-sm overflow-y-auto">
         <div
             class="modal-content relative my-auto max-h-[calc(100vh-1.5rem)] w-full max-w-4xl overflow-y-auto rounded-[1.5rem] border border-white/70 bg-white shadow-2xl custom-scrollbar sm:max-h-[calc(100vh-2rem)] sm:rounded-[2rem]">
             <button id="first-visit-close-button" type="button"
@@ -264,6 +317,12 @@
                             </div>
                         </div>
                     </div>
+                    <button type="button" id="media-appearances-trigger"
+                        class="flex w-full items-center justify-center gap-2.5 rounded-2xl bg-[#FF0000] px-5 py-3.5 text-sm font-black text-white shadow-lg shadow-red-200/60 transition hover:-translate-y-0.5 hover:bg-[#E62117] hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+                        aria-label="הופעות בתקשורת — צפייה בסרטונים">
+                        <i data-lucide="youtube" class="h-6 w-6 shrink-0" aria-hidden="true"></i>
+                        <span>הופעות בתקשורת</span>
+                    </button>
                     <div class="grid gap-3 lg:grid-cols-2">
                         <a href="#contact" id="first-visit-contact-btn"
                             class="flex items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-slate-50 px-5 py-3 text-center text-sm font-black text-slate-800 shadow-sm transition hover:bg-white hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-300">
@@ -278,6 +337,27 @@
                     </div>
                 </div>
             </div>
+            <p
+                class="border-t border-slate-100 px-4 py-2.5 text-center text-[0.65rem] leading-relaxed text-slate-400/90 sm:px-8">
+                האתר נבנה על ידי אורי באמצעות בינה מלאכותית
+                <span class="mx-1 inline-flex align-middle gap-1.5" aria-label="Gemini, Claude, Cursor">
+                    <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer"
+                        class="opacity-60 transition hover:opacity-100" title="Gemini">
+                        <img src="https://cdn.simpleicons.org/googlegemini/94a3b8" alt="Gemini" class="h-3.5 w-3.5"
+                            width="14" height="14" loading="lazy">
+                    </a>
+                    <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer"
+                        class="opacity-60 transition hover:opacity-100" title="Claude">
+                        <img src="https://cdn.simpleicons.org/claude/94a3b8" alt="Claude" class="h-3.5 w-3.5"
+                            width="14" height="14" loading="lazy">
+                    </a>
+                    <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer"
+                        class="opacity-60 transition hover:opacity-100" title="Cursor">
+                        <img src="https://cdn.simpleicons.org/cursor/94a3b8" alt="Cursor" class="h-3.5 w-3.5"
+                            width="14" height="14" loading="lazy">
+                    </a>
+                </span>
+            </p>
         </div>
     </div>
 
@@ -305,7 +385,7 @@
 
         <!-- Main trigger button -->
         <button id="cv-download-btn"
-            onclick="(function(){var d=document.getElementById('cv-dropdown');d.classList.toggle('hidden');})()"
+            onclick="(function(){var d=document.getElementById('cv-dropdown');if(d)d.classList.toggle('hidden');})()"
             class="flex items-center gap-2.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white px-5 py-3 rounded-2xl shadow-xl shadow-indigo-300/50 font-bold text-sm transition-all hover:scale-105 active:scale-95 cursor-pointer">
             <i data-lucide="file-down" class="w-5 h-5 flex-shrink-0"></i>
             הורדת קו"ח (PDF)
@@ -315,6 +395,182 @@
 
 
     <!-- MODAL CONTAINERS -->
+
+    <!-- Media appearances (YouTube channel) -->
+    <div id="media-appearances-modal"
+        class="custom-modal fixed inset-0 z-[3100] hidden items-start sm:items-center justify-center p-3 sm:p-4 bg-slate-900/75 backdrop-blur-sm overflow-y-auto">
+        <div
+            class="modal-content relative my-auto w-full max-w-5xl overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-2xl sm:rounded-[2rem]">
+            <div class="relative bg-[#FF0000] px-5 py-5 text-white sm:px-7 sm:py-6">
+                <button id="media-appearances-close-x" type="button"
+                    class="absolute top-3 end-3 flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-white/15 text-white transition hover:bg-white/30 sm:top-4 sm:end-4"
+                    aria-label="סגירת חלון הופעות בתקשורת">
+                    <i data-lucide="x" class="h-6 w-6"></i>
+                </button>
+                <div class="flex flex-wrap items-center gap-3 pe-12">
+                    <svg class="h-9 w-9 shrink-0" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="#fff"
+                            d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .6 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.3.6 9.3.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8z" />
+                        <path fill="#FF0000" d="M9.75 15.02l6.19-3.51-6.19-3.51v7.02z" />
+                    </svg>
+                    <div>
+                        <h3 class="text-xl font-black leading-tight sm:text-2xl">הופעות בתקשורת</h3>
+                        <p class="mt-1 text-xs font-semibold text-white/90 sm:text-sm">ראיונות, כתבות ופרופילים — לדוגמא</p>
+                    </div>
+                </div>
+            </div>
+            <div class="max-h-[min(70vh,42rem)] overflow-y-auto custom-scrollbar p-4 sm:p-6">
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    <a href="https://www.youtube.com/watch?v=v6Dm5s9ATXE"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/v6Dm5s9ATXE/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">אורי רשטיק — ראיון בתוכנית עצמאי בשטח 102FM</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=PwFIXCexxQQ"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/PwFIXCexxQQ/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">ראיון אישי עם רז שכניק על הישגיו הניהוליים</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=LDyGlJG70wA"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/LDyGlJG70wA/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">כתבת פרופיל על אורי רשטיק</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=_SaC21TpP8Q"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/_SaC21TpP8Q/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">שיחה עם גדי סוקניק — קבוצת רכישה לפנסיה</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=xtX4ZwaOJfE"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/xtX4ZwaOJfE/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">איש השנה — מועדון ליונס גור אריה 2011/2012</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=-BYkBCTlAbw"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/-BYkBCTlAbw/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">פרויקט מגורים לסטודנטים עם אזרחים ותיקים</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=Xf23CSh70ZU"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/Xf23CSh70ZU/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">האם כדאי ללמוד במכללה או באוניברסיטה?</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=X5KgR6B1SqA"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/X5KgR6B1SqA/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">ראיון ברדיוס 100FM</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=L0BCpaU6jog"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/L0BCpaU6jog/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">דמי אבטלה לעצמאים</p>
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=_ghJhHGB6Ws"
+                        class="media-video-card group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-sm transition hover:border-red-200 hover:shadow-md">
+                        <div class="relative aspect-video overflow-hidden bg-slate-900">
+                            <img src="https://i.ytimg.com/vi/_ghJhHGB6Ws/hqdefault.jpg" alt="" loading="lazy"
+                                class="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]">
+                            <span
+                                class="media-video-card-play pointer-events-none absolute inset-0 flex items-center justify-center bg-slate-950/25">
+                                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-[#FF0000] text-white shadow-lg">
+                                    <i data-lucide="play" class="h-6 w-6 fill-white"></i>
+                                </span>
+                            </span>
+                        </div>
+                        <p class="p-3 text-sm font-bold leading-snug text-slate-800">תוכנית «אחד שיודעת» — קשת</p>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 bg-slate-50 px-4 py-3 sm:px-6">
+                <button id="media-appearances-close-btn" type="button"
+                    class="w-full rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-black text-white transition hover:bg-slate-800">
+                    סגירה
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- ESHKOLOT Modal -->
     <div id="eshkolot-modal"
@@ -1270,7 +1526,7 @@
                     <li class="text-justify"><a href="#shaham-pnl-training"
                             class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">הקמת
                             יחידת רווח והפסד (P&amp;L) בשח"ם: מערך ההכשרה המקצועית</a></li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">התאחדות
                             הסטודנטים</a> — נדל״ן מניב וזרועות עסקיות להשקעות חברתיות.</li>
                     <li class="text-justify"><a href="#eshkolot-global-trigger" data-modal-trigger="eshkolot-global-trigger"
@@ -1278,7 +1534,7 @@
                             אסטרטגית לשווקים גלובליים באשכולות</a> — פיתוח אפיקי הכנסה והתרחבות בינלאומית מול שוקי חוץ.</li>
                     <li class="text-justify"><span class="font-semibold text-sky-900">שיווק, דיגיטל וקמפיינים</span> —
                         ניהול ספקי שיווק חיצוניים, קמפיינים, הנחיית תכנים והפעלת ערוצי צמיחה דיגיטליים.</li>
-                    <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="tau-info-trigger"
+                    <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="role-tau-aguda"
                             class="font-semibold text-sky-700 underline decoration-sky-200 underline-offset-2 hover:text-sky-900">הרחבת
                             חברות בנות ומוצרים באגודת הסטודנטים באוניברסיטת תל אביב</a></li>
                 </ul>
@@ -1324,7 +1580,7 @@
                     <li class="text-justify"><a href="#shaham-agreements-trigger" data-modal-trigger="shaham-agreements-trigger"
                             class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">גיוון
                             אפיקי פעילות והסכמים אסטרטגיים בשח״ם</a> — הרחבת פעילות והסכמי התקשרות אסטרטגיים.</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-indigo-700 underline decoration-indigo-200 underline-offset-2 hover:text-indigo-900">יוזמות
                             חברתיות כלכליות בהתאחדות הסטודנטים</a></li>
                 </ul>
@@ -1365,12 +1621,12 @@
                     <li class="text-justify"><a href="#shaham-growth-trigger" data-modal-trigger="shaham-growth-trigger"
                             class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">שח״ם
                             — ניהול מנהלים וצמיחה</a> — טרנספורמציה, ‎+40%‎ בבסיס לקוחות.</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">התאחדות
                             הסטודנטים</a> — ארגון גג ~330,000 צעירים.</li>
                     <li class="text-justify"><span class="font-semibold text-violet-900">ניהול פרויקטים קהילתיים</span> —
                         בניית תקציב ולוחות זמנים, תיאום וסנכרון מול גורמים שונים והנעה לעמידה ביעדים.</li>
-                    <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="tau-info-trigger"
+                    <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="role-tau-aguda"
                             class="font-semibold text-violet-700 underline decoration-violet-200 underline-offset-2 hover:text-violet-900">אגודת
                             הסטודנטים ת״א</a> — שלד ארגוני ~80 עובדים.</li>
                     <li class="text-justify"><a href="#givatayim-info-trigger" data-modal-trigger="givatayim-info-trigger"
@@ -1410,10 +1666,10 @@
                     <li class="text-justify"><a href="#eshlam-project"
                             class="font-semibold text-emerald-800 underline decoration-emerald-200 underline-offset-2 hover:text-emerald-950">אשכולות
                             — הקמת JV ומיסוד מודל הכנסות</a> — הקמת Joint Venture אסטרטגי לשינוי מודל ההכנסות.</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-emerald-800 underline decoration-emerald-200 underline-offset-2 hover:text-emerald-950">קבוצת
                             חברות בהתאחדות הסטודנטים</a> — הקמת חברות בנות וזרועות עסקיות.</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-emerald-800 underline decoration-emerald-200 underline-offset-2 hover:text-emerald-950">ראשות
                             בורד בחברות בנות</a> — בהתאחדות הסטודנטים.</li>
                     <li class="text-justify"><a href="#shaham-neshama-trigger" data-modal-trigger="shaham-neshama-trigger"
@@ -1558,7 +1814,7 @@
                     <li class="text-justify"><a href="#eshkolot-ip-trigger" data-modal-trigger="eshkolot-ip-trigger"
                             class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">בג״ץ
                             (2021)</a> — עתירה תקדימית להכללת ציוד קצה חכם במנגנוני פיצוי על קניין רוחני.</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-rose-800 underline decoration-rose-200 underline-offset-2 hover:text-rose-950">תקציבים
                             למעונות וסטודנטים בפריפריה</a> — גיוס ושחרור תקציבים לאומיים בהתאחדות הסטודנטים.</li>
                     <li class="text-justify"><a href="#shaham-international-trigger" data-modal-trigger="shaham-international-trigger"
@@ -1607,7 +1863,7 @@
                     <li class="text-justify"><a href="#shaham-growth-trigger" data-modal-trigger="shaham-growth-trigger"
                             class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">CRM
                             בשח״ם</a> — לשיפור שירות ושימור לקוחות.</li>
-                    <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="tau-info-trigger"
+                    <li class="text-justify"><a href="#role-tau-aguda" data-modal-trigger="role-tau-aguda"
                             class="font-semibold text-blue-800 underline decoration-blue-200 underline-offset-2 hover:text-blue-950">דיגיטציה
                             באגודת הסטודנטים.</a></li>
                     <li class="text-justify"><a href="#eshkolot-revenue-trigger" data-modal-trigger="eshkolot-revenue-trigger"
@@ -1725,7 +1981,7 @@
                     <li class="text-justify"><a href="#eshkolot-charts"
                             class="font-semibold text-teal-800 underline decoration-teal-200 underline-offset-2 hover:text-teal-950">רה-ארגון
                             באשכולות</a> — ממצב סיכון עסקי לחוסן פיננסי וצמיחה מואצת.</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-teal-800 underline decoration-teal-200 underline-offset-2 hover:text-teal-950">הבראת
                             התאחדות הסטודנטים</a> — תוכנית הבראה וצמיחה לארגון הגג הארצי.</li>
                     <li class="text-justify"><a href="#shaham-growth-trigger" data-modal-trigger="shaham-growth-trigger"
@@ -1774,7 +2030,7 @@
                     <li class="text-justify"><a href="#shaham-agreements-trigger" data-modal-trigger="shaham-agreements-trigger"
                             class="font-semibold text-orange-900 underline decoration-orange-200 underline-offset-2 hover:text-orange-950">גיוון
                             אפיקים בשח״ם</a> — הרחבת פעילות והסכמי התקשרות אסטרטגיים.</li>
-                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                    <li class="text-justify"><a href="#role-nuis" data-modal-trigger="role-nuis"
                             class="font-semibold text-orange-900 underline decoration-orange-200 underline-offset-2 hover:text-orange-950">ניהול
                             משא ומתן מול משרד האוצר</a> — לשחרור תקציב מכללות טכנולוגיות ומעונות סטודנטים.</li>
                     <li class="text-justify"><a href="#eshkolot-global-trigger" data-modal-trigger="eshkolot-global-trigger"
@@ -2786,7 +3042,7 @@
                                 ווטסאפ
                             </a>
                             <a href="https://drive.google.com/uc?export=download&id=1gAb5XWHSZ-iA1mHvCHb8Ausu7Eh3X5jD"
-                                target="_blank" rel="noopener noreferrer" type="text/vcard"
+                                target="_blank" rel="noopener noreferrer"
                                 class="flex items-center gap-2 bg-emerald-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-emerald-700 transition-all hover:scale-105 shadow-md">
                                 <i data-lucide="contact-round" class="w-5 h-5 ms-1"></i> שמירה באנשי קשר
                             </a>
@@ -2807,6 +3063,12 @@
                                 class="flex items-center gap-2 bg-slate-700 text-white font-semibold px-6 py-3 rounded-full hover:bg-slate-800 transition-all hover:scale-105 shadow-md">
                                 <i data-lucide="phone" class="w-5 h-5 ms-1"></i> טלפון
                             </a>
+                            <button type="button" id="media-appearances-trigger-hero"
+                                class="flex items-center gap-2 bg-[#FF0000] text-white font-bold px-6 py-3 rounded-full shadow-lg shadow-red-200/50 transition-all hover:scale-105 hover:bg-[#E62117] focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+                                aria-label="הופעות בתקשורת — צפייה בסרטונים">
+                                <i data-lucide="youtube" class="h-5 w-5 shrink-0" aria-hidden="true"></i>
+                                הופעות בתקשורת
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -2881,7 +3143,7 @@
                                 class="min-w-0 flex-1 font-semibold text-sky-800 underline decoration-sky-200 underline-offset-2 hover:text-sky-950">יו״ר
                                 דירקטוריון מי גבעתיים</a></li>
                         <li class="flex gap-2"><span class="w-8 shrink-0 font-black text-indigo-600">14.</span><a
-                                href="#role-nuis" data-modal-trigger="nuis-info-trigger"
+                                href="#role-nuis" data-modal-trigger="role-nuis"
                                 class="min-w-0 flex-1 font-semibold text-sky-800 underline decoration-sky-200 underline-offset-2 hover:text-sky-950">יושב
                                 ראש התאחדות הסטודנטים</a></li>
                         <li class="flex gap-2"><span class="w-8 shrink-0 font-black text-indigo-600">15.</span><a
@@ -2897,7 +3159,7 @@
                                 class="min-w-0 flex-1 font-semibold text-sky-800 underline decoration-sky-200 underline-offset-2 hover:text-sky-950">נבחר
                                 ציבור בעיריית גבעתיים</a></li>
                         <li class="flex gap-2"><span class="w-8 shrink-0 font-black text-indigo-600">18.</span><a
-                                href="#role-tau-aguda" data-modal-trigger="tau-info-trigger"
+                                href="#role-tau-aguda" data-modal-trigger="role-tau-aguda"
                                 class="min-w-0 flex-1 font-semibold text-sky-800 underline decoration-sky-200 underline-offset-2 hover:text-sky-950">יושב
                                 ראש אגודת הסטודנטים באוניברסיטת ת״א</a></li>
                         <li class="flex gap-2"><span class="w-8 shrink-0 font-black text-indigo-600">19.</span><a
@@ -3177,7 +3439,7 @@
                                 </div>
                             </button>
                             <a href="#eshlam-project"
-                                onclick="document.getElementById('subsidiaries-dropdown').classList.add('hidden'); document.getElementById('subsidiaries-icon').classList.remove('rotate-180');"
+                                onclick="(function(){var d=document.getElementById('subsidiaries-dropdown');var i=document.getElementById('subsidiaries-icon');if(d)d.classList.add('hidden');if(i)i.classList.remove('rotate-180');})()"
                                 class="w-full px-4 py-3 hover:bg-violet-50 transition-colors flex items-start gap-3 focus:outline-none text-justify cursor-pointer">
                                 <i data-lucide="rocket" class="w-4 h-4 text-violet-500 mt-0.5 flex-shrink-0"></i>
                                 <div>
@@ -3838,7 +4100,7 @@
                                     title="פודקאסט Ynet — חזון, השפעה ומנהיגות (אורי רשטיק)" frameborder="0" allowfullscreen loading="lazy"></iframe>
                             </div>
                             <div class="mt-5 flex flex-col items-center sm:mt-6">
-                                <a href="https://www.youtube.com/watch?v=PwFIXCexxQQ" target="_blank"
+                                <a href="https://www.youtube.com/watch?v=PwFIXCexxQQ"
                                     rel="noopener noreferrer"
                                     class="inline-flex items-center gap-2 rounded-full bg-red-600 px-6 py-2.5 text-sm font-bold text-white shadow-md transition-all hover:bg-red-700 hover:shadow-lg sm:text-base">
                                     <i data-lucide="play-circle" class="h-5 w-5 shrink-0"></i> צפייה ב-YouTube
@@ -4045,7 +4307,7 @@
             </div>
         </button>
 
-        <a id="shaham-market-leader-card" href="https://www.youtube.com/watch?v=9FQuylS6b5I" target="_blank" rel="noopener noreferrer"
+        <a id="shaham-market-leader-card" href="https://www.youtube.com/watch?v=9FQuylS6b5I" rel="noopener noreferrer"
             class="achievement-card scroll-mt-28 cursor-pointer bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group hover:shadow-2xl hover:border-rose-300 hover:ring-4 hover:ring-rose-50 transition-all text-justify focus:outline-none w-full relative overflow-hidden">
             <div
                 class="w-20 h-16 overflow-hidden bg-white rounded-xl flex items-center justify-center mb-6 shadow-inner ring-1 ring-rose-100 group-hover:scale-110 transition-transform relative z-10">
@@ -4295,8 +4557,9 @@
 
             <!-- NUIS -->
             <div id="role-nuis"
-                class="achievement-card scroll-mt-24 bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group transition-all relative cursor-pointer hover:shadow-2xl hover:border-blue-300 hover:ring-4 hover:ring-blue-50 text-justify">
-                <div id="nuis-info-trigger" class="flex-1 flex flex-col">
+                class="achievement-card scroll-mt-24 bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group transition-all relative cursor-pointer hover:shadow-2xl hover:border-blue-300 hover:ring-4 hover:ring-blue-50 text-justify"
+                tabindex="0" role="button" aria-label="NUIS — לצפייה בסיכום">
+                <div class="flex-1 flex flex-col">
                     <div
                         class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-inner border border-slate-100">
                         <img src="https://upload.wikimedia.org/wikipedia/he/e/eb/NUIS_New_Logo.png" alt="NUIS Logo"
@@ -4394,9 +4657,10 @@
             </button>
 
             <!-- Givatayim -->
-            <div
-                class="achievement-card bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group transition-all relative cursor-pointer hover:shadow-2xl hover:border-blue-300 hover:ring-4 hover:ring-blue-50 text-justify">
-                <div id="givatayim-info-trigger" class="flex-1 flex flex-col">
+            <div id="givatayim-info-trigger"
+                class="achievement-card scroll-mt-24 bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group transition-all relative cursor-pointer hover:shadow-2xl hover:border-blue-300 hover:ring-4 hover:ring-blue-50 text-justify"
+                tabindex="0" role="button" aria-label="עיריית גבעתיים — לצפייה בפעילות">
+                <div class="flex-1 flex flex-col">
                     <div
                         class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-inner border border-slate-100">
                         <img src="https://www.givatayim.muni.il/content/images/logo.png" alt="Givatayim Logo"
@@ -4457,8 +4721,9 @@
 
             <!-- TAU Student Union -->
             <div id="role-tau-aguda"
-                class="achievement-card scroll-mt-24 bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group transition-all relative cursor-pointer hover:shadow-2xl hover:border-blue-300 hover:ring-4 hover:ring-blue-50 text-justify">
-                <div id="tau-info-trigger" class="flex-1 flex flex-col">
+                class="achievement-card scroll-mt-24 bg-white p-6 rounded-2xl shadow-lg border border-slate-100 flex flex-col h-full group transition-all relative cursor-pointer hover:shadow-2xl hover:border-blue-300 hover:ring-4 hover:ring-blue-50 text-justify"
+                tabindex="0" role="button" aria-label="אגודת הסטודנטים תל אביב — לצפייה בסיכום">
+                <div class="flex-1 flex flex-col">
                     <div
                         class="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-4 shadow-inner border border-slate-100">
                         <img src="https://upload.wikimedia.org/wikipedia/he/thumb/2/23/%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_%D7%90%D7%92%D7%95%D7%93%D7%AA_%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D_%D7%90%D7%95%D7%A0%D7%99%D7%91%D7%A8%D7%A1%D7%99%D7%98%D7%AA_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91_2009.svg/1920px-%D7%A1%D7%9E%D7%9C%D7%99%D7%9C_%D7%90%D7%92%D7%95%D7%93%D7%AA_%D7%94%D7%A1%D7%98%D7%95%D7%93%D7%A0%D7%98%D7%99%D7%9D_%D7%90%D7%95%D7%A0%D7%99%D7%91%D7%A8%D7%A1%D7%99%D7%98%D7%AA_%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91_2009.svg.png"
@@ -4631,13 +4896,14 @@
                 <i data-lucide="message-square-quote"
                     class="h-7 w-7 shrink-0 text-indigo-500 sm:h-8 sm:w-8 md:h-9 md:w-9" aria-hidden="true"></i>
                 <span class="text-slate-900">המלצות מקצועיות</span>
-                <span class="font-light text-slate-400 sm:font-normal" aria-hidden="true">-</span>
-                <span class="bg-gradient-to-l from-indigo-800 to-violet-800 bg-clip-text font-bold text-transparent">ממגוון ממשקים מקצועיים</span>
             </h2>
             <div class="mx-auto mt-6 h-1.5 w-32 max-w-[min(100%,18rem)] rounded-full bg-gradient-to-r from-sky-500 via-indigo-500 to-violet-500 shadow-sm shadow-indigo-200/50 sm:mt-7 sm:h-2 sm:w-40"
                 aria-hidden="true"></div>
             <div class="mt-6 space-y-3 text-base leading-relaxed text-slate-600 sm:text-lg">
-                <p class="text-pretty text-lg font-medium leading-relaxed text-slate-700 sm:text-xl sm:font-semibold md:text-2xl md:leading-snug">מקולגות, לקוחות, מנהלים ושותפים אסטרטגיים.</p>
+                <p class="text-pretty text-lg font-medium leading-relaxed text-slate-700 sm:text-xl sm:font-semibold md:text-2xl md:leading-snug">
+                    <span class="bg-gradient-to-l from-indigo-800 to-violet-800 bg-clip-text font-bold text-transparent">ממגוון ממשקים</span>
+                    <span class="text-slate-700"> — מקולגות, לקוחות, מנהלים ושותפים אסטרטגיים.</span>
+                </p>
             </div>
         </div>
 
@@ -4645,7 +4911,7 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
 
             <!-- Card 1: Large - Sky Cyan | col 7 -->
-            <div
+            <div id="testimonial-primary-card"
                 class="md:col-span-7 bg-gradient-to-br from-cyan-500 to-sky-600 rounded-3xl p-7 shadow-xl flex flex-col hover:-translate-y-1 transition-all">
                 <svg class="w-12 h-12 text-white/30 mb-5" fill="currentColor" viewBox="0 0 32 32">
                     <path
@@ -4732,7 +4998,7 @@
                 <p class="text-white/90 leading-relaxed text-justify flex-grow mb-5 text-sm">צפו בסרטון המציג את פועלו של
                     אורי רשטיק, שהוביל לזכייתו בתואר איש השנה של מועדון ליונס גור אריה 2011/2012.</p>
                 <div class="mt-auto pt-4 border-t border-white/20">
-                    <a href="https://www.youtube.com/watch?v=xtX4ZwaOJfE&t=7s" target="_blank" rel="noopener noreferrer"
+                    <a href="https://www.youtube.com/watch?v=xtX4ZwaOJfE&t=7s" rel="noopener noreferrer"
                         class="inline-flex items-center gap-1.5 text-white/95 hover:text-white text-xs font-bold transition-colors">
                         <i data-lucide="monitor-play" class="w-3.5 h-3.5"></i>
                         צפייה ב-YouTube
@@ -4788,7 +5054,7 @@
                     </svg>
                 </a>
                 <a href="https://drive.google.com/uc?export=download&id=1gAb5XWHSZ-iA1mHvCHb8Ausu7Eh3X5jD"
-                    target="_blank" rel="noopener noreferrer" type="text/vcard"
+                    target="_blank" rel="noopener noreferrer"
                     class="group relative inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-slate-500 shadow-sm ring-1 ring-slate-200 transition-all hover:-translate-y-0.5 hover:text-emerald-600 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
                     title="פתיחת כרטיס ביקור" aria-label="פתיחת כרטיס ביקור">
                     <i data-lucide="contact-round" class="w-[18px] h-[18px]"></i>
@@ -4808,6 +5074,26 @@
                 </a>
             </div>
             <p class="mt-5 text-slate-400 text-xs font-normal tracking-wide">אורי רשטיק · 2026</p>
+            <p class="mx-auto mt-3 max-w-md text-[0.65rem] leading-relaxed text-slate-400/90">
+                האתר נבנה על ידי אורי באמצעות בינה מלאכותית
+                <span class="inline-flex align-middle gap-1.5 mx-1" aria-label="Gemini, Claude, Cursor">
+                    <a href="https://gemini.google.com/" target="_blank" rel="noopener noreferrer"
+                        class="opacity-60 transition hover:opacity-100" title="Gemini">
+                        <img src="https://cdn.simpleicons.org/googlegemini/94a3b8" alt="Gemini" class="h-3.5 w-3.5"
+                            width="14" height="14" loading="lazy">
+                    </a>
+                    <a href="https://claude.ai/" target="_blank" rel="noopener noreferrer"
+                        class="opacity-60 transition hover:opacity-100" title="Claude">
+                        <img src="https://cdn.simpleicons.org/claude/94a3b8" alt="Claude" class="h-3.5 w-3.5"
+                            width="14" height="14" loading="lazy">
+                    </a>
+                    <a href="https://cursor.com/" target="_blank" rel="noopener noreferrer"
+                        class="opacity-60 transition hover:opacity-100" title="Cursor">
+                        <img src="https://cdn.simpleicons.org/cursor/94a3b8" alt="Cursor" class="h-3.5 w-3.5"
+                            width="14" height="14" loading="lazy">
+                    </a>
+                </span>
+            </p>
         </div>
     </footer>
 
@@ -4821,21 +5107,137 @@
     </a>
 
     <script>
-        // Use a generic Modal class for both modals
+        let bodyScrollLockCount = 0;
+        const modalOverlayStack = [];
+
+        const lockBodyScroll = () => {
+            bodyScrollLockCount += 1;
+            document.body.style.overflow = 'hidden';
+        };
+
+        const unlockBodyScroll = () => {
+            bodyScrollLockCount = Math.max(0, bodyScrollLockCount - 1);
+            if (bodyScrollLockCount === 0) document.body.style.overflow = '';
+        };
+
+        const bindGlobalEscapeListener = () => {
+            if (bindGlobalEscapeListener.bound) return;
+            bindGlobalEscapeListener.bound = true;
+            document.addEventListener('keydown', (e) => {
+                if (e.key !== 'Escape') return;
+                const top = modalOverlayStack[modalOverlayStack.length - 1];
+                if (top && typeof top.close === 'function') top.close();
+            });
+        };
+
+        const pushModalOverlay = (controller) => {
+            const idx = modalOverlayStack.indexOf(controller);
+            if (idx >= 0) modalOverlayStack.splice(idx, 1);
+            modalOverlayStack.push(controller);
+            lockBodyScroll();
+        };
+
+        const popModalOverlay = (controller) => {
+            const idx = modalOverlayStack.indexOf(controller);
+            if (idx >= 0) modalOverlayStack.splice(idx, 1);
+            unlockBodyScroll();
+        };
+
+        const closeModalElement = (el) => {
+            const controller = modalOverlayStack.find((item) => item.el === el);
+            if (controller) {
+                controller.close();
+                return true;
+            }
+            return false;
+        };
+
+        let revenueModalCharts = [];
+        let revenueModalChartsReady = false;
+
+        function initRevenueModalCharts() {
+            if (revenueModalChartsReady) {
+                revenueModalCharts.forEach((chart) => {
+                    try { chart.resize(); } catch (_) { /* ignore */ }
+                });
+                return;
+            }
+            const agreeEl = document.getElementById('agreementsGrowthChart');
+            if (agreeEl) {
+                revenueModalCharts.push(new Chart(agreeEl.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ['2021', '2025'],
+                        datasets: [{
+                            label: 'מספר הסכמים',
+                            data: [4, 60],
+                            backgroundColor: ['#cbd5e1', '#0ea5e9'],
+                            borderRadius: 6,
+                            barThickness: 40
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: { x: { grid: { display: false }, border: { display: false } }, y: { display: false, grid: { display: false } } }
+                    }
+                }));
+            }
+            const baseEl = document.getElementById('budgetBaseChart');
+            if (baseEl) {
+                const ctx = baseEl.getContext('2d');
+                const grad = ctx.createLinearGradient(0, 0, 0, 150);
+                grad.addColorStop(0, 'rgba(16, 185, 129, 0.4)');
+                grad.addColorStop(1, 'rgba(16, 185, 129, 0)');
+                revenueModalCharts.push(new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2021', '2022', '2023', '2024', '2025'],
+                        datasets: [{
+                            label: 'בסיס תקציבי',
+                            data: [10, 16, 22, 28, 34],
+                            fill: true,
+                            backgroundColor: grad,
+                            borderColor: '#10b981',
+                            borderWidth: 4,
+                            pointBackgroundColor: '#fff',
+                            pointBorderColor: '#10b981',
+                            pointBorderWidth: 2,
+                            pointRadius: 4,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: { x: { grid: { display: false }, border: { display: false }, ticks: { color: '#94a3b8' } }, y: { display: false, min: 0, grid: { display: false } } }
+                    }
+                }));
+            }
+            revenueModalChartsReady = true;
+        }
+
         class GenericModal {
             constructor(modalId, triggerId, closeBtnIds) {
                 this.el = document.getElementById(modalId);
                 this.trigger = document.getElementById(triggerId);
                 this.closeBtns = closeBtnIds.map(id => document.getElementById(id)).filter(b => b);
+                this.modalId = modalId;
+                this.isOpen = false;
                 this.init();
+                bindGlobalEscapeListener();
             }
 
             init() {
                 if (this.trigger) {
                     this.trigger.addEventListener('click', (e) => {
-                        // Very simple logic: if you clicked the trigger or anything inside it, open it.
-                        // (Except if you clicked an internal accordion button, which we check via closest).
                         if (!e.target.closest('button.focus\\:outline-none:not(#' + this.trigger.id + ')')) {
+                            this.open();
+                        }
+                    });
+                    this.trigger.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
                             this.open();
                         }
                     });
@@ -4846,24 +5248,24 @@
                         if (e.target === this.el) this.close();
                     });
                 }
-
-                // Add global ESC key listener for this modal instance
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && !this.el.classList.contains('hidden')) {
-                        this.close();
-                    }
-                });
             }
 
             open() {
-                if (!this.el) return;
+                if (!this.el || this.isOpen) return;
+                this.isOpen = true;
+                pushModalOverlay(this);
                 this.el.classList.remove('hidden');
                 this.el.classList.add('flex');
                 setTimeout(() => this.el.classList.add('modal-active'), 10);
+                if (this.modalId === 'eshkolot-revenue-modal') {
+                    setTimeout(() => initRevenueModalCharts(), 80);
+                }
             }
 
             close() {
-                if (!this.el) return;
+                if (!this.el || !this.isOpen) return;
+                this.isOpen = false;
+                popModalOverlay(this);
                 this.el.classList.remove('modal-active');
                 setTimeout(() => {
                     this.el.classList.remove('flex');
@@ -4872,8 +5274,22 @@
             }
         }
 
+        function setupModalAccessibility() {
+            document.querySelectorAll('.custom-modal, #global-video-modal, #first-visit-modal').forEach((modal) => {
+                modal.setAttribute('role', 'dialog');
+                modal.setAttribute('aria-modal', 'true');
+            });
+            document.querySelectorAll('button:not([type])').forEach((btn) => {
+                btn.type = 'button';
+            });
+            document.querySelectorAll('button[id$="-close-x"], button[id$="-close-btn"], #global-video-close').forEach((btn) => {
+                if (!btn.getAttribute('aria-label')) btn.setAttribute('aria-label', 'סגירת חלון');
+            });
+        }
+
         // Standard Initialization
         document.addEventListener('DOMContentLoaded', () => {
+            setupModalAccessibility();
             // Initialize Modals
             new GenericModal('shaham-modal', 'shaham-info-trigger', ['shaham-close-x', 'shaham-close-btn']);
             new GenericModal('eshkolot-modal', 'eshkolot-info-trigger', ['eshkolot-close-x', 'eshkolot-close-btn']);
@@ -4886,8 +5302,8 @@
             new GenericModal('shaham-agreements-modal', 'shaham-agreements-trigger', ['shaham-agreements-close-x', 'shaham-agreements-close-btn']);
             new GenericModal('shaham-placement-modal', 'shaham-placement-trigger', ['shaham-placement-close-x', 'shaham-placement-close-btn']);
             new GenericModal('shaham-international-modal', 'shaham-international-trigger', ['shaham-international-close-x', 'shaham-international-close-btn']);
-            new GenericModal('nuis-modal', 'nuis-info-trigger', ['nuis-close-x', 'nuis-close-btn']);
-            new GenericModal('tau-modal', 'tau-info-trigger', ['tau-close-x', 'tau-close-btn']);
+            new GenericModal('nuis-modal', 'role-nuis', ['nuis-close-x', 'nuis-close-btn']);
+            new GenericModal('tau-modal', 'role-tau-aguda', ['tau-close-x', 'tau-close-btn']);
             new GenericModal('che-modal', 'che-info-trigger', ['che-close-x', 'che-close-btn']);
             new GenericModal('givatayim-modal', 'givatayim-info-trigger', ['givatayim-close-x', 'givatayim-close-btn']);
             new GenericModal('keren-eshkolot-modal', 'keren-modal-trigger', ['keren-eshkolot-close-x', 'keren-eshkolot-close-btn']);
@@ -4905,27 +5321,28 @@
             new GenericModal('skills-matrix-modal-branding', 'skills-matrix-trigger-branding', ['skills-matrix-branding-close-x', 'skills-matrix-branding-close-btn']);
             new GenericModal('skills-matrix-modal-turnaround', 'skills-matrix-trigger-turnaround', ['skills-matrix-turnaround-close-x', 'skills-matrix-turnaround-close-btn']);
             new GenericModal('skills-matrix-modal-negotiation', 'skills-matrix-trigger-negotiation', ['skills-matrix-negotiation-close-x', 'skills-matrix-negotiation-close-btn']);
+            const mediaAppearancesModal = new GenericModal('media-appearances-modal', 'media-appearances-trigger', ['media-appearances-close-x', 'media-appearances-close-btn']);
 
             const firstVisitModal = document.getElementById('first-visit-modal');
             const firstVisitCloseX = document.getElementById('first-visit-close-button');
             const firstVisitFullBtn = document.getElementById('first-visit-full-btn');
             const firstVisitSkillsBtn = document.getElementById('first-visit-skills-btn');
             const firstVisitContactBtn = document.getElementById('first-visit-contact-btn');
-            const closeFirstVisitModal = () => {
-                if (!firstVisitModal) return;
-                firstVisitModal.classList.remove('modal-active');
-                setTimeout(() => {
-                    firstVisitModal.classList.remove('flex');
-                    firstVisitModal.classList.add('hidden');
-                }, 300);
+
+            const snapshotModal = {
+                close() {
+                    if (!firstVisitModal) return;
+                    popModalOverlay(this);
+                    firstVisitModal.classList.remove('modal-active');
+                    setTimeout(() => {
+                        firstVisitModal.classList.remove('flex');
+                        firstVisitModal.classList.add('hidden');
+                        document.body.classList.remove('overflow-y-hidden');
+                    }, 300);
+                }
             };
 
-            const openFirstVisitModal = () => {
-                if (!firstVisitModal) return;
-                firstVisitModal.classList.remove('hidden');
-                firstVisitModal.classList.add('flex');
-                setTimeout(() => firstVisitModal.classList.add('modal-active'), 10);
-            };
+            const closeFirstVisitModal = () => snapshotModal.close();
 
             const closeAndScrollFromFirstVisit = (targetId) => {
                 closeFirstVisitModal();
@@ -4935,7 +5352,9 @@
                 }
             };
 
-            if (firstVisitModal) setTimeout(openFirstVisitModal, 450);
+            if (firstVisitModal) {
+                pushModalOverlay(snapshotModal);
+            }
 
             firstVisitCloseX?.addEventListener('click', () => {
                 closeFirstVisitModal();
@@ -4951,13 +5370,19 @@
                 e.preventDefault();
                 closeAndScrollFromFirstVisit('contact');
             });
+            const mediaAppearancesOpen = mediaAppearancesModal.open.bind(mediaAppearancesModal);
+            mediaAppearancesModal.open = function () {
+                mediaAppearancesOpen();
+                setTimeout(() => {
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 30);
+            };
+            document.getElementById('media-appearances-trigger-hero')?.addEventListener('click', (e) => {
+                e.preventDefault();
+                mediaAppearancesModal.open();
+            });
             firstVisitModal?.addEventListener('click', (e) => {
                 if (e.target === firstVisitModal) {
-                    closeFirstVisitModal();
-                }
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && firstVisitModal && !firstVisitModal.classList.contains('hidden')) {
                     closeFirstVisitModal();
                 }
             });
@@ -5032,12 +5457,21 @@
                             if (edu) edu.open = true;
                         }
                         if (tocAction === 'testimonials-highlight') {
-                            const first = document.querySelector('#testimonials .grid > div:first-child');
+                            const first = document.getElementById('testimonial-primary-card');
                             if (first) {
                                 first.classList.add('ring-4', 'ring-indigo-400', 'ring-offset-2');
                                 window.setTimeout(() => {
                                     first.classList.remove('ring-4', 'ring-indigo-400', 'ring-offset-2');
                                 }, 1600);
+                            }
+                        }
+                        if (tocAction === 'skills-map-expand') {
+                            const bento = document.getElementById('skills-matrix-bento');
+                            if (bento) {
+                                bento.classList.add('ring-4', 'ring-indigo-400', 'ring-offset-2', 'rounded-3xl');
+                                window.setTimeout(() => {
+                                    bento.classList.remove('ring-4', 'ring-indigo-400', 'ring-offset-2', 'rounded-3xl');
+                                }, 1800);
                             }
                         }
                         if (tocAction === 'contact-focus') {
@@ -5060,6 +5494,10 @@
                     const shell = body.closest('.skills-matrix-modal-shell');
                     if (!shell) {
                         afterClose();
+                        return;
+                    }
+                    if (closeModalElement(shell)) {
+                        window.setTimeout(afterClose, 320);
                         return;
                     }
                     shell.classList.remove('modal-active');
@@ -5185,7 +5623,7 @@
                 type: 'line',
                 data: {
                     labels: ['2020', '2021', '2022', '2023', '2024', '2025 (תחזית)'],
-                    datasets: [{ data: [31.6, 36.4, 35.3, 37.2, 40.1, 45], borderColor: '#0284c7', borderWidth: 4, tension: 0.4 }]
+                    datasets: [{ label: 'הכנסות', data: [31.6, 36.4, 35.3, 37.2, 40.1, 45], borderColor: '#0284c7', borderWidth: 4, tension: 0.4 }]
                 },
                 options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { ...sharedOptions.plugins.title, text: 'צמיחת הכנסות (במיליוני ש"ח)' } } }
             });
@@ -5194,7 +5632,7 @@
                 type: 'line',
                 data: {
                     labels: ['2020', '2021', '2022', '2023', '2024', '2025 (תחזית)'],
-                    datasets: [{ data: [23.1, 25.5, 25.6, 26.3, 30.1, 33], borderColor: '#10b981', borderWidth: 4, tension: 0.4 }]
+                    datasets: [{ label: 'רווח נקי', data: [23.1, 25.5, 25.6, 26.3, 30.1, 33], borderColor: '#10b981', borderWidth: 4, tension: 0.4 }]
                 },
                 options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { ...sharedOptions.plugins.title, text: 'מגמת רווח נקי (במיליוני ש"ח)' } } }
             });
@@ -5204,7 +5642,7 @@
                 type: 'line',
                 data: {
                     labels: ['2014', '2016', '2018', '2020'],
-                    datasets: [{ data: [2.16, 2.70, 3.87, 5.6], borderColor: '#8b5cf6', borderWidth: 4, tension: 0.4 }]
+                    datasets: [{ label: 'הכנסות', data: [2.16, 2.70, 3.87, 5.6], borderColor: '#8b5cf6', borderWidth: 4, tension: 0.4 }]
                 },
                 options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { ...sharedOptions.plugins.title, text: 'הכנסות שח"ם (במיליוני ש"ח)' } } }
             });
@@ -5213,68 +5651,15 @@
                 type: 'line',
                 data: {
                     labels: ['2015', '2017', '2019', '2020'],
-                    datasets: [{ data: [3.6, 200.4, 784.4, 750.7], borderColor: '#3b82f6', borderWidth: 4, tension: 0.4 }]
+                    datasets: [{ label: 'עודפים', data: [3.6, 200.4, 784.4, 750.7], borderColor: '#3b82f6', borderWidth: 4, tension: 0.4 }]
                 },
                 options: { ...sharedOptions, plugins: { ...sharedOptions.plugins, title: { ...sharedOptions.plugins.title, text: 'מגמת עודפים (באלפי ש"ח)' } } }
             });
 
             // Donut Charts for Eshlam
             const donutOptions = { responsive: true, maintainAspectRatio: false, cutout: '75%', plugins: { legend: { display: false }, tooltip: { enabled: false } } };
-            safeInitChart('eshlamSplitBefore', { type: 'doughnut', data: { datasets: [{ data: [50, 50], backgroundColor: ['#94a3b8', '#f1f5f9'], borderWidth: 0 }] }, options: donutOptions });
-            safeInitChart('eshlamSplitAfter', { type: 'doughnut', data: { datasets: [{ data: [64, 36], backgroundColor: ['#7c3aed', '#f1f5f9'], borderWidth: 0 }] }, options: donutOptions });
-
-            // New Eshkolot Revenue Strategy Charts
-            const agreeEl = document.getElementById('agreementsGrowthChart');
-            if (agreeEl) {
-                new Chart(agreeEl.getContext('2d'), {
-                    type: 'bar',
-                    data: {
-                        labels: ['2021', '2025'],
-                        datasets: [{
-                            data: [4, 60],
-                            backgroundColor: ['#cbd5e1', '#0ea5e9'],
-                            borderRadius: 6,
-                            barThickness: 40
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { display: false } },
-                        scales: { x: { grid: { display: false }, border: { display: false } }, y: { display: false, grid: { display: false } } }
-                    }
-                });
-            }
-
-            const baseEl = document.getElementById('budgetBaseChart');
-            if (baseEl) {
-                const ctx = baseEl.getContext('2d');
-                const grad = ctx.createLinearGradient(0, 0, 0, 150);
-                grad.addColorStop(0, 'rgba(16, 185, 129, 0.4)');
-                grad.addColorStop(1, 'rgba(16, 185, 129, 0)');
-                new Chart(ctx, {
-                    type: 'line',
-                    data: {
-                        labels: ['2021', '2022', '2023', '2024', '2025'],
-                        datasets: [{
-                            data: [10, 16, 22, 28, 34],
-                            fill: true,
-                            backgroundColor: grad,
-                            borderColor: '#10b981',
-                            borderWidth: 4,
-                            pointBackgroundColor: '#fff',
-                            pointBorderColor: '#10b981',
-                            pointBorderWidth: 2,
-                            pointRadius: 4,
-                            tension: 0.4
-                        }]
-                    },
-                    options: {
-                        responsive: true, maintainAspectRatio: false,
-                        plugins: { legend: { display: false } },
-                        scales: { x: { grid: { display: false }, border: { display: false }, ticks: { color: '#94a3b8' } }, y: { display: false, min: 0, grid: { display: false } } }
-                    }
-                });
-            }
+            safeInitChart('eshlamSplitBefore', { type: 'doughnut', data: { datasets: [{ label: 'לפני', data: [50, 50], backgroundColor: ['#94a3b8', '#f1f5f9'], borderWidth: 0 }] }, options: donutOptions });
+            safeInitChart('eshlamSplitAfter', { type: 'doughnut', data: { datasets: [{ label: 'אחרי', data: [64, 36], backgroundColor: ['#7c3aed', '#f1f5f9'], borderWidth: 0 }] }, options: donutOptions });
 
             lucide.createIcons();
         });
@@ -5282,10 +5667,10 @@
 
     <!-- Global Video Modal -->
     <div id="global-video-modal"
-        class="fixed inset-0 z-[3000] hidden items-center justify-center p-4 sm:p-6 bg-slate-900/90 backdrop-blur-sm transition-opacity duration-300">
+        class="fixed inset-0 z-[3200] hidden items-center justify-center p-4 sm:p-6 bg-slate-900/90 backdrop-blur-sm transition-opacity duration-300">
         <div
             class="relative w-full max-w-5xl aspect-video bg-black rounded-2xl shadow-2xl overflow-hidden border border-slate-700 mx-auto mt-10">
-            <button id="global-video-close"
+            <button id="global-video-close" type="button" aria-label="סגירת חלון וידאו"
                 class="absolute -top-12 end-0 sm:top-4 sm:end-4 text-white hover:text-red-400 transition-colors p-2 z-[3010] cursor-pointer pointer-events-auto">
                 <i data-lucide="x" class="w-7 h-7 pointer-events-none"></i>
             </button>
@@ -5300,9 +5685,35 @@
             const videoModal = document.getElementById('global-video-modal');
             const videoIframe = document.getElementById('global-video-iframe');
             const videoCloseBtn = document.getElementById('global-video-close');
+            if (!videoModal || !videoIframe) return;
+
+            bindGlobalEscapeListener();
+
+            const videoController = {
+                el: videoModal,
+                isOpen: false,
+                close() {
+                    if (!this.isOpen) return;
+                    this.isOpen = false;
+                    popModalOverlay(this);
+                    videoModal.classList.add('hidden');
+                    videoModal.classList.remove('flex');
+                    videoIframe.src = '';
+                },
+                open(videoId) {
+                    if (!videoId || this.isOpen) return;
+                    this.isOpen = true;
+                    pushModalOverlay(this);
+                    videoIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+                    videoModal.classList.remove('hidden');
+                    videoModal.classList.add('flex');
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }
+            };
 
             document.querySelectorAll('a[href*="youtube.com/watch"], a[href*="youtu.be/"]').forEach(a => {
                 a.addEventListener('click', e => {
+                    if (a.dataset.videoExternal === 'true') return;
                     e.preventDefault();
                     let videoId = '';
                     if (a.href.includes('youtube.com/watch')) {
@@ -5310,28 +5721,13 @@
                     } else if (a.href.includes('youtu.be/')) {
                         videoId = a.href.split('youtu.be/')[1].split('?')[0];
                     }
-                    if (videoId) {
-                        videoIframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
-                        videoModal.classList.remove('hidden');
-                        videoModal.classList.add('flex');
-                        document.body.style.overflow = 'hidden';
-                        if (typeof lucide !== 'undefined') {
-                            lucide.createIcons();
-                        }
-                    }
+                    if (videoId) videoController.open(videoId);
                 });
             });
 
-            const closeVideo = () => {
-                videoModal.classList.add('hidden');
-                videoModal.classList.remove('flex');
-                videoIframe.src = '';
-                document.body.style.overflow = '';
-            };
-
-            if (videoCloseBtn) videoCloseBtn.addEventListener('click', closeVideo);
-            if (videoModal) videoModal.addEventListener('click', e => {
-                if (e.target === videoModal) closeVideo();
+            if (videoCloseBtn) videoCloseBtn.addEventListener('click', () => videoController.close());
+            videoModal.addEventListener('click', e => {
+                if (e.target === videoModal) videoController.close();
             });
         });
     </script>
