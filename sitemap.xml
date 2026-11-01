@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://orireshtik.co.il/</loc>
     <lastmod>2026-10-31</lastmod>
@@ -16,6 +16,16 @@
   </url>
   <url>
     <loc>https://orireshtik.co.il/press/</loc>
-    <lastmod>2026-10-31</lastmod>
+    <lastmod>2026-11-01</lastmod>
+    <image:image><image:loc>https://orireshtik.co.il/photos/desktop.ini</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-eshkolot-podium-2024.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-eshkolot-tribute-2025.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-eshkolot-veteran-artists-2025.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-fia-2018.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-podium-2014.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-shaham-awards-2019-actors.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-shaham-awards-2019.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-speaking-2014.jpg</image:loc></image:image>
+    <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-stage-2014.jpg</image:loc></image:image>
   </url>
 </urlset>
