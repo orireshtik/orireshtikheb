@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://orireshtik.co.il/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <xhtml:link rel="alternate" hreflang="he" href="https://orireshtik.co.il/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://orireshtik.com/"/>
   </url>
   <url>
     <loc>https://orireshtik.co.il/globes-40/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-10-31</lastmod>
   </url>
   <url>
     <loc>https://orireshtik.co.il/raz-shechnik/</loc>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://orireshtik.co.il/press/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-eshkolot-podium-2024.jpg</image:loc></image:image>
     <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-eshkolot-tribute-2025.jpg</image:loc></image:image>
     <image:image><image:loc>https://orireshtik.co.il/photos/ori-reshtik-eshkolot-veteran-artists-2025.jpg</image:loc></image:image>
